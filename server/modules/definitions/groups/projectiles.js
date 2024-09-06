@@ -47,6 +47,36 @@ Class.superSplitterBullet = {
         },
     ]
 }
+Class.forkBullet = {
+  	PARENT: "bullet",
+  	INDEPENDENT: true,
+  	GUNS: [
+      	{
+          	POSITION: [8, 10, 1, 0, 0, 0, 0],
+          	PROPERTIES: {
+              	SHOOT_SETTINGS: combineStats([g.basic, { pen: 2, range: 0.5 }]),
+              	TYPE: ["bullet", {PERSISTS_AFTER_DEATH: true}],
+              	SHOOT_ON_DEATH: true
+            }
+        },
+      	{
+          	POSITION: [8, 10, 1, 0, 0, 22.5, 0],
+          	PROPERTIES: {
+              	SHOOT_SETTINGS: combineStats([g.basic, { pen: 2, range: 0.5 }]),
+              	TYPE: ["bullet", {PERSISTS_AFTER_DEATH: true}],
+              	SHOOT_ON_DEATH: true
+            }
+        },
+      	{
+        		POSITION: [8, 10, 1, 0, 0, -22.5, 0],
+          	PROPERTIES: {
+              	SHOOT_SETTINGS: combineStats([g.basic, { pen: 2, range: 0.5 }]),
+              	TYPE: ["bullet", {PERSISTS_AFTER_DEATH: true}],
+              	SHOOT_ON_DEATH: true
+            }
+      	}
+    ]
+}
 Class.turretedBullet = makeAuto('bullet', "Auto-Bullet", {type: "bulletAutoTurret", size: 14, color: "veryLightGrey", angle: 0});
 Class.speedBullet = {
     PARENT: "bullet",

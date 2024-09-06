@@ -713,7 +713,7 @@ Class.marksman = {
                 WIDTH: 8.5
             },
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.sniper]),
+                SHOOT_SETTINGS: combineStats([g.basic, g.sniper, { pen: 2 }]),
                 TYPE: "bullet"
             }
         }
@@ -1157,7 +1157,7 @@ Class.fork = {
             },
             PROPERTIES: {
                 SHOOT_SETTINGS: combineStats([g.basic, g.sniper, { pen: 2 }]),
-                TYPE: "bullet"
+                TYPE: "forkBullet"
             }
         }
     ]
