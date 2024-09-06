@@ -102,6 +102,14 @@ Class.dollarer = {
       	makePoundGun({ y: -t - 1, delay: 0.5})
     ]
 }
+Class.caltropper = { // i will not call it wark, cry about it
+		PARENT: "trapper",
+  	LABEL: "Caltropper",
+  	GUNS: [
+      	makeTrapGun({ y: t }),
+      	makeTrapGun({ y: -t, delay: 0.5 })
+    ]
+}
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
@@ -111,3 +119,4 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
 Class.machineGun.UPGRADES_TIER_2.push("machinist")
 Class.pounder.UPGRADES_TIER_2.push("dollarer")
+Cladd.trapper.UPGRADES_TIER_2.push("caltropper")
