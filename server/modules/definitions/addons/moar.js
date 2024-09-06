@@ -30,7 +30,7 @@ const makePoundGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     }
 }
 const makeTrapGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return [{
+    return {
         POSITION: [15, 7, 1, x, y, angle, delay],
     },
     {
@@ -40,7 +40,15 @@ const makeTrapGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
           	TYPE: "trap",
           	STAT_CALCULATOR: "trap"
         }
-    }]
+    }
+}
+const makeTrapGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [20, 8, 1, x, y, angle, delay],
+        PROPERTIES: {
+    
+        }
+    }
 }
 const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
@@ -119,4 +127,4 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
 Class.machineGun.UPGRADES_TIER_2.push("machinist")
 Class.pounder.UPGRADES_TIER_2.push("dollarer")
-Cladd.trapper.UPGRADES_TIER_2.push("caltropper")
+Class.trapper.UPGRADES_TIER_2.push("caltropper")
