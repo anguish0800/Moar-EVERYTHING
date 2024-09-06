@@ -96,8 +96,8 @@ Class.owl = { // tank itself
   	LABEL: "Owl",
   	GUNS: [snipeGun, snipeGun]
 }
-Class.owl.GUNS[1].POSITION.Y = 5.5 // twin logic
-Class.owl.GUNS[2].POSITION.Y = -5.5
+Class.owl.GUNS[0].POSITION.Y = 5.5 // twin logic
+Class.owl.GUNS[1].POSITION.Y = -5.5
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
