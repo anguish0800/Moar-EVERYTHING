@@ -11,9 +11,9 @@ const makeSnipeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
-const makeMachineGunGun = ({ aspect = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeMachineGunGun = ({ width = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [12, 10, aspect + 1.4, x + 8, y, angle, delay],
+        POSITION: [12, width, 1.4, x + 8, y, angle, delay],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.basic, g.machineGun]),
             TYPE: "bullet",
@@ -87,8 +87,8 @@ Class.machinist = {
   	PARENT: "machineGun",
   	LABEL: "Machinist",
   	GUNS: [
-      	makeMachineGunGun({ y: t }),
-      	makeMachineGunGun({ y: -t, delay: 0.5 })
+      	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8}),
+      	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
     ]
 }
 // upgrade paths
