@@ -13,7 +13,7 @@ Class.breaker = makeMulti("sniper", 6, "Breaker")
 Class.husk = makeMulti("marksman", 3, "Husk")
 // machine guns
 Class.sabotager = makeMulti("machineGun", 3, "Sabotager")
-Class.foctar = makeMulti("artillery", 3, "Foctar")
+Class.foctar = makeMulti("artillery", 3, "Foctar") // doesnt count as a machine gun but idc
 Class.vase = makeMulti("gunner", 3, "Vase")
 Class.ultimatum = makeMulti("sprayer", 3, "Ultimatum")
 Class.shower = makeMulti("machineGun", 6, "Shower")
@@ -25,7 +25,7 @@ Class.eradicator = makeMulti("pounder", 6, "Eradicator")
 
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader")
-		Class.degrader.UPGRADER_TIER_3 = ["rustage", "prey", "machShot", "assault", "breaker"]
+		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
 		Class.assassin.UPGRADES_TIER_3.push("rustage")
 		Class.hunter.UPGRADES_TIER_3.push("prey")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
