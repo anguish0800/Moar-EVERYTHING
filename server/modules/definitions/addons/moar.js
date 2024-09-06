@@ -96,7 +96,7 @@ Class.dollarer = {
   	LABEL: "Dollarer",
   	GUNS: [
       	{
-          	POSITION: [3, 25, -0.4, -3, 0, 0, 0]
+          	POSITION: [6, 25, -0.4, -6, 0, 0, 0]
         },
       	makePoundGun({ y: t + 1 }),
       	makePoundGun({ y: -t - 1, delay: 0.5})
