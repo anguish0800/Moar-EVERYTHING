@@ -4,7 +4,7 @@ const g = require('../gunvals.js');
 // references
 const makeSnipeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [24, 8.5, 0, x, y, angle, delay],
+        POSITION: [24, 8.5, 1, x, y, angle, delay],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.basic, g.sniper]),
             TYPE: "bullet",
