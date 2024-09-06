@@ -11,7 +11,6 @@ const snipeGun = {
   	PROPERTIES: {
       	SHOOT_SETTINGS: combineStats([g.basic, g.sniper]),
       	TYPE: "bullet",
-      	INDEPENDENT: true
     }
 }
 const machineGunGun = {
