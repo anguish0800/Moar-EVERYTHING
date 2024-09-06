@@ -6,7 +6,7 @@ module.exports = {
     host: "moar-everything.glitch.me",
 
     // Which port to run the web server on.
-    port: 5050,
+    port: 5000,
 
     // How often to update the list of the entities that players can see.
     // Has effects of when entities are activated.
