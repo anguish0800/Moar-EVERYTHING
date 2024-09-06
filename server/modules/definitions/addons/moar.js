@@ -6,6 +6,7 @@ const snipeGun = {
   	POSITION: {
       	LENGTH: 24,
       	WIDTH: 8.5,
+      	Y: 0
     },
   	PROPERTIES: {
       	SHOOT_SETTINGS: combineStats([g.basic, g.sniper]),
@@ -17,7 +18,8 @@ const machineGunGun = {
         LENGTH: 12,
         WIDTH: 10,
       	ASPECT: 1.4,
-      	X: 8
+      	X: 8,
+      	Y: 0
     },
     PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.basic, g.machineGun]),
@@ -27,7 +29,8 @@ const machineGunGun = {
 const pounderGun = {
     POSITION: {
         LENGTH: 20.5,
-        WIDTH: 12
+        WIDTH: 12,
+      	Y: 0
     },
     PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.basic, g.pounder]),
@@ -37,14 +40,16 @@ const pounderGun = {
 const trapperGun = [{
     POSITION: {
         LENGTH: 15,
-        WIDTH: 7
+        WIDTH: 7,
+      	Y: 0
     }
 }, {
     POSITION: {
         LENGTH: 3,
         WIDTH: 7,
       	ASPECT: 1.7,
-      	X: 15
+      	X: 15,
+      	Y: 0
     },
     PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.trap]),
@@ -55,7 +60,8 @@ const trapperGun = [{
 const assGun = { // to any immature idiot reading this: i named it "assGun" not because of the word "ass" but because "ass" was a shortened version of the word "(ass)assin"
     POSITION: {
         LENGTH: 27,
-        WIDTH: 8
+        WIDTH: 8,
+      	Y: 0
     },
     PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.assassin]),
@@ -90,8 +96,8 @@ Class.owl = { // tank itself
   	LABEL: "Owl",
   	GUNS: [snipeGun, snipeGun]
 }
-Class.owl.GUNS[1].Y = 5.5 // twin logic
-/*Class.owl.GUNS[2].Y = -5.5*/
+Class.owl.GUNS[1].POSITION.Y = 5.5 // twin logic
+Class.owl.GUNS[2].POSITION.Y = -5.5
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
