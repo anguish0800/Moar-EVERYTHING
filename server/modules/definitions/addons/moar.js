@@ -12,7 +12,7 @@ const snipeGun = {
       	TYPE: "bullet"
     }
 }
-const gun = {
+const machineGunGun = {
     POSITION: {
         LENGTH: 12,
         WIDTH: 10,
@@ -20,10 +20,49 @@ const gun = {
       	X: 8
     },
     PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.machineGun]),
+        TYPE: "bullet"
+    }
+}
+const pounderGun = {
+    POSITION: {
+        LENGTH: 20.5,
+        WIDTH: 12
+    },
+    PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.pounder]),
+        TYPE: "bullet"
+    }
+}
+const trapperGun = [{
+    POSITION: {
+        LENGTH: 15,
+        WIDTH: 7
+    }
+}, {
+    POSITION: {
+        LENGTH: 3,
+        WIDTH: 7,
+      	ASPECT: 1.7,
+      	X: 15
+    },
+    PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.trap]),
+        TYPE: "trap",
+      	STAT_CALCULATOR: "trap"
+    }
+}]
+const assGun = { // to any immature idiot reading this: t
+    POSITION: {
+        LENGTH: x,
+        WIDTH: y
+    },
+    PROPERTIES: {
         SHOOT_SETTINGS: combineStats([g.basic]),
         TYPE: "bullet"
     }
 }
+
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
