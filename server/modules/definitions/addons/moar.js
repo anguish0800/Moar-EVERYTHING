@@ -31,9 +31,6 @@ const makePoundGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
 }
 const makeTrapGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [15, 7, 1, x, y, angle, delay],
-    },
-    {
       	POSITION: [3, 7, 1.7, x + 15, y, angle, delay],
       	PROPERTIES: {
         		SHOOT_SETTINGS: combineStats([g.trap]),
@@ -44,10 +41,7 @@ const makeTrapGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
 }
 const makeTrapGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [20, 8, 1, x, y, angle, delay],
-        PROPERTIES: {
-    
-        }
+        POSITION: [15, 7, 1, x, y, angle, delay],
     }
 }
 const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
@@ -114,8 +108,10 @@ Class.caltropper = { // i will not call it wark, cry about it
 		PARENT: "trapper",
   	LABEL: "Caltropper",
   	GUNS: [
-      	makeTrapGun({ y: t }),
-      	makeTrapGun({ y: -t, delay: 0.5 })
+      	makeTrapGun2({ y: t + 0.5, angle: 8 }),
+      	makeTrapGun2({ y: -t - 0.5, angle: -8 }),
+      	makeTrapGun({ y: t + 0.5, angle: 8 }),
+      	makeTrapGun({ y: -t - 0.5, angle: -8, delay: 0.5 })
     ]
 }
 // upgrade paths
