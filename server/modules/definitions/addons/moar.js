@@ -52,13 +52,13 @@ const trapperGun = [{
       	STAT_CALCULATOR: "trap"
     }
 }]
-const assGun = { // to any immature idiot reading this: t
+const assGun = { // to any immature idiot reading this: i named it "assGun" not because of the word "ass" but because "ass" was a shortened version of the word "(ass)assin"
     POSITION: {
-        LENGTH: x,
-        WIDTH: y
+        LENGTH: 27,
+        WIDTH: 8
     },
     PROPERTIES: {
-        SHOOT_SETTINGS: combineStats([g.basic]),
+        SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.assassin]),
         TYPE: "bullet"
     }
 }
@@ -84,8 +84,16 @@ Class.demolitionist = makeMulti("destroyer", 3, "Demolitionist")
 Class.exterminator = makeMulti("launcher", 3, "Exterminator")
 Class.eradicator = makeMulti("pounder", 6, "Eradicator")
 
+// twins
+Class.owl = { // tank itself
+  	PARENT: "sniper",
+  	LABEL: "Owl",
+  	GUNS: [snipeGun, snipeGun]
+}
+Class.owl.GUNS[1].Y = 5.5 // twin logic
+/*Class.owl.GUNS[2].Y = -5.5*/
 // upgrade paths
-Class.sniper.UPGRADES_TIER_2.push("degrader")
+Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
 		Class.assassin.UPGRADES_TIER_3.push("rustage")
 		Class.hunter.UPGRADES_TIER_3.push("prey")
