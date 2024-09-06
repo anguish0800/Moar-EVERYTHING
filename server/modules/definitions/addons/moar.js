@@ -10,7 +10,7 @@ Class.prey = makeMulti("hunter", 3, "Prey")
 Class.machShot = makeMulti("minigun", 3, "Mach-Shot")
 Class.assault = makeMulti("rifle", 3, "Assault")
 Class.breaker = makeMulti("sniper", 6, "Breaker")
-Class.husk = makeMulti("marksman", 3, "Husk")
+/*Class.husk = makeMulti("marksman", 3, "Husk")*/
 // machine guns
 Class.sabotager = makeMulti("machineGun", 3, "Sabotager")
 Class.foctar = makeMulti("artillery", 3, "Foctar")
@@ -29,4 +29,4 @@ Class.sniper.UPGRADES_TIER_2.push("degrader")
 		Class.assassin.UPGRADES_TIER_3.push("rustage")
 		Class.hunter.UPGRADES_TIER_3.push("prey")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
-		Class.marksman.UPGRADES_TIER_3.push("husk")
+		/*Class.marksman.UPGRADES_TIER_3.push("husk")*/
