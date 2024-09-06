@@ -108,10 +108,10 @@ Class.caltropper = { // i will not call it wark, cry about it
 		PARENT: "trapper",
   	LABEL: "Caltropper",
   	GUNS: [
-      	makeTrapGun2({ y: t + 0.5, angle: 8 }),
-      	makeTrapGun2({ y: -t - 0.5, angle: -8 }),
-      	makeTrapGun({ y: t + 0.5, angle: 8 }),
-      	makeTrapGun({ y: -t - 0.5, angle: -8, delay: 0.5 })
+      	makeTrapGun2({ y: t, angle: 8 }),
+      	makeTrapGun2({ y: -t, angle: -8 }),
+      	makeTrapGun({ y: t, angle: 8 }),
+      	makeTrapGun({ y: -t, angle: -8, delay: 0.5 })
     ]
 }
 // upgrade paths
