@@ -11,32 +11,36 @@ const makeSnipeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
-const makeMachineGunGun = ({ x = 8, y = 0, angle = 0, delay = 0 }) => {
+const makeMachineGunGun = ({ aspect = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [12, 10, 1.4, x, y, angle, delay],
+        POSITION: [12, 10, aspect + 1.4, x + 8, y, angle, delay],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic]),
+            SHOOT_SETTINGS: combineStats([g.basic, g.machineGun]),
             TYPE: "bullet",
         }
     }
 }
 const makePoundGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [20, 8, 1, x, y, angle, delay],
+        POSITION: [20.5, 12, 1, x, y, angle, delay],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic]),
+            SHOOT_SETTINGS: combineStats([g.basic, g.pounder]),
             TYPE: "bullet",
         }
     }
 }
-const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [20, 8, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic]),
-            TYPE: "bullet",
+const makeTrapGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return [{
+        POSITION: [15, 7, 1, x, y, angle, delay],
+    },
+    {
+      	POSITION: [3, 7, 1.7, x + 15, y, angle, delay],
+      	PROPERTIES: {
+        		SHOOT_SETTINGS: combineStats([g.trap]),
+          	TYPE: "trap",
+          	STAT_CALCULATOR: "trap"
         }
-    }
+    }]
 }
 const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
@@ -70,12 +74,21 @@ Class.exterminator = makeMulti("launcher", 3, "Exterminator")
 Class.eradicator = makeMulti("pounder", 6, "Eradicator")
 
 // twins
+const t = 5.5 
 Class.owl = { // tank itself
   	PARENT: "sniper",
   	LABEL: "Owl",
   	GUNS: [
-      	makeSnipeGun({ y: 5.5 }),
-      	makeSnipeGun({ y: -5.5, delay: 0.5 })
+      	makeSnipeGun({ y: t }),
+      	makeSnipeGun({ y: -t, delay: 0.5 })
+    ]
+}
+Class.machinist = {
+  	PARENT: "machineGun",
+  	LABEL: "Machinist",
+  	GUNS: [
+      	makeMachineGunGun({ y: t }),
+      	makeMachineGunGun({ y: -t, delay: 0.5 })
     ]
 }
 // upgrade paths
@@ -85,3 +98,4 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.hunter.UPGRADES_TIER_3.push("prey")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
+Class.machineGun.UPGRADES_TIER_2.push("machinist")
