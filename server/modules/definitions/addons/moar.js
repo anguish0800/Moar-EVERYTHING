@@ -1,7 +1,29 @@
 const { combineStats, makeAuto, makeOver, makeDeco, makeGuard, makeBird, makeMulti, makeRadialAuto } = require('../facilitators.js');
 const { base, statnames, gunCalcNames, dfltskl, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
-
+// references
+const snipeGun = {
+  	POSITION: {
+      	LENGTH: 24,
+      	WIDTH: 8.5,
+    },
+  	PROPERTIES: {
+      	SHOOT_SETTINGS: combineStats([g.basic, g.sniper]),
+      	TYPE: "bullet"
+    }
+}
+const gun = {
+    POSITION: {
+        LENGTH: 12,
+        WIDTH: 10,
+      	ASPECT: 1.4,
+      	X: 8
+    },
+    PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic]),
+        TYPE: "bullet"
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
