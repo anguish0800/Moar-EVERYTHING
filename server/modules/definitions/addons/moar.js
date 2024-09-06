@@ -38,7 +38,7 @@ Class.owl = { // tank itself
   	LABEL: "Owl",
   	GUNS: [
       	makeSnipeGun({ y: 5.5 }),
-      	makeSnipeGun({ y: 5.5, delay: 0.5 })
+      	makeSnipeGun({ y: -5.5, delay: 0.5 })
     ]
 }
 // upgrade paths
