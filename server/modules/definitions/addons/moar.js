@@ -91,6 +91,17 @@ Class.machinist = {
       	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
     ]
 }
+Class.dollarer = {
+  	PARENT: "pounder",
+  	LABEL: "Dollarer",
+  	GUNS: [
+      	{
+          	POSITION: [3, 25, -0.4, -3, 0, 0, 0]
+        },
+      	makePoundGun({ y: t + 1 }),
+      	makePoundGun({ y: -t - 1, delay: 0.5})
+    ]
+}
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
@@ -99,3 +110,4 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
 Class.machineGun.UPGRADES_TIER_2.push("machinist")
+Class.pounder.UPGRADES_TIER_2.push("dollarer")
