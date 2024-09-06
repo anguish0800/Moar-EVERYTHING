@@ -11,6 +11,43 @@ const makeSnipeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
+const makeMachineGunGun = ({ x = 8, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [12, 10, 1.4, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic]),
+            TYPE: "bullet",
+        }
+    }
+}
+const makePoundGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [20, 8, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic]),
+            TYPE: "bullet",
+        }
+    }
+}
+const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [20, 8, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic]),
+            TYPE: "bullet",
+        }
+    }
+}
+const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [20, 8, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic]),
+            TYPE: "bullet",
+        }
+    }
+}
+
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
