@@ -165,7 +165,7 @@ Class.canary = {
       	makeMarksGun2({ y: -t, delay: 0.5 })
     ]
 }
-Class.crow = makeMulti("owl", 5)
+Class.crow = makeMulti("owl", 2, "crow")
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
