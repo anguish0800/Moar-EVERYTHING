@@ -44,11 +44,11 @@ const makeTrapGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         POSITION: [15, 7, 1, x, y, angle, delay],
     }
 }
-const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeAssGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => { // to sny immature idiot: i called it assgun cause ass was a shortened version of (ass)assin
     return {
-        POSITION: [20, 8, 1, x, y, angle, delay],
+        POSITION: [27, 8, 1, x, y, angle, delay],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic]),
+            SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.assassin]),
             TYPE: "bullet",
         }
     }
@@ -114,13 +114,28 @@ Class.caltropper = { // i will not call it wark, cry about it
       	makeTrapGun({ y: -t, angle: -8, delay: 0.5 })
     ]
 }
+// owl upgrades
+Class.griffin = {
+  	PARENT: "assassin",
+  	LABEL: "Griffin",
+  	GUNS: [
+      	makeAssGun({ y: t - 1 }),
+      	makeAssGun({ y: -t + 1, delay: 0.5 }),
+      	{
+      			POSITION: [5, 17, -1.4, 8, 0, 0, 0]
+      	}
+    ]
+}
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
+		// degrader
 		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
 		Class.assassin.UPGRADES_TIER_3.push("rustage")
 		Class.hunter.UPGRADES_TIER_3.push("prey")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
+		// owl
+		Class.owl.UPGRADES_TIER_3 = ["griffin"]
 Class.machineGun.UPGRADES_TIER_2.push("machinist")
 Class.pounder.UPGRADES_TIER_2.push("dollarer")
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
