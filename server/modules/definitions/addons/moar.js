@@ -76,6 +76,15 @@ const makeMinigunGun = ({ length = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
+const makeGunnerGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [12, 3.5, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic, g.twin, g.gunner, {speed: 1.2}]),
+            TYPE: "bullet",
+        }
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -187,6 +196,10 @@ Class.megagun = {
       	makeMinigunGun({ length: -4, y: t, delay: 4/6 }),
       	makeMinigunGun({ length: -4, y: -t, delay: 5/6})
     ]
+}
+Class.catastrophe = {
+  	PARENT: "gunner",
+  	LABEL: "Catastrophe"
 }
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
