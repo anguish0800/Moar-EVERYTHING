@@ -169,7 +169,7 @@ Class.griffin = {
   	LABEL: "Griffin",
   	GUNS: [
       	{
-          	POSITION: [6, 17, -0.4, -9, 0, 0, 0]
+          	POSITION: [6, 21, -0.4, -9, 0, 0, 0]
         },
       	makeAssGun({ y: t - 1 }),
       	makeAssGun({ y: -t + 1, delay: 0.5 }),
@@ -251,8 +251,24 @@ Class.dyadic = makeMulti("machinist", 2, "Dyadic")
 Class.currency = {
   	PARENT: "destroyer",
   	LABEL: "Currency",
-  	GUNS
+  	GUNS: [
+      	{
+          	POSITION: [3, 28, -0.4, -3, 0, 0, 0]
+        },
+      	makeDestGun({ y: 7 }),
+      	makeDestGun({ y: -7, delay: 0.5 })
+    ]
 }
+Class.bentPound = {
+  	PARENT: "pounder",
+  	LABEL: "Bent-Pound",
+  	GUNS: [
+      	makePoundGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
+      	makePoundGun({ x: -2, y: 2, angle: 17, delay: 0.5 }),
+      	makePoundGun({})
+    ]
+}
+Class.extinguisher = makeMulti("dollarer", 2, "Extinguisher")
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
@@ -272,8 +288,11 @@ Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machinist")
 		// machinist 
 		Class.machinist.UPGRADES_TIER_3 = ["megagun", "catastrophe", "splasher", "bentMach", "dyadic"]
 Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
+		// obliterator
 		Class.obliterator.UPGRADES_TIER_3 = ["demolitionist", "architect", "foctar", "exterminator", "eradicator", "mega3"]
 		Class.destroyer.UPGRADES_TIER_3.push("demolitionist")
 		Class.artillery.UPGRADES_TIER_3.push("foctar")
 		Class.launcher.UPGRADES_TIER_3.push("exterminator")
+		// dollarer
+		Class.dollarer.UPGRADES_TIER_3 = ["currency", "bentPound", "extinguisher"]
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
