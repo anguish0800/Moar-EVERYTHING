@@ -160,7 +160,9 @@ Class.canary = {
       	makeMarksGun({ y: t, x: 5 }),
       	makeMarksGun({ y: -t, x: 5 }),
       	makeMarksGun({ y: t, x: 10 }),
-      	makeMarksGun({ y: -t, x: 10 })
+      	makeMarksGun({ y: -t, x: 10 }),
+      	makeMarksGun2({ y: t }),
+      	makeMarksGun2({ y: -t, delay: 0.5 })
     ]
 }
 // upgrade paths
@@ -172,7 +174,7 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
 		// owl
-		Class.owl.UPGRADES_TIER_3 = ["griffin", "dual", "musket", "bentSnipe", "breaker"]
+		Class.owl.UPGRADES_TIER_3 = ["griffin", "dual", "musket", "canary", "bentSnipe", "breaker"]
 Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machinist")
 		Class.sabotager.UPGRADES_TIER_3 = ["foctar", "machShot", "vase", "ultimatum", "shower"]
 		Class.gunner.UPGRADES_TIER_3.push("vase")
