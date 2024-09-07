@@ -53,9 +53,18 @@ const makeAssGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => { // to sny immat
         }
     }
 }
-const makeRifleGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeMarksGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [20, 12, 1, x, y, angle, delay],
+        POSITION: [5, 8.5, 1.3, x + 8, y, angle, delay],
+    }
+}
+const makeMarksGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [24, 8.5, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic, g.sniper, { pen: 2 }]),
+            TYPE: "bullet",
+        }
     }
 }
 // flanks
