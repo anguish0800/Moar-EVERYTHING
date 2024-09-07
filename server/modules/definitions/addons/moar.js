@@ -151,6 +151,18 @@ Class.bentSnipe = {
       	makeSnipeGun({})
     ]
 }
+Class.canary = {
+  	PARENT: "marksman",
+  	LABEL: "Canary",
+  	GUNS: [
+      	makeMarksGun({ y: t }),
+      	makeMarksGun({ y: -t }),
+      	makeMarksGun({ y: t, x: 5 }),
+      	makeMarksGun({ y: -t, x: 5 }),
+      	makeMarksGun({ y: t, x: 10 }),
+      	makeMarksGun({ y: -t, x: 10 })
+    ]
+}
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
