@@ -94,6 +94,15 @@ const makeSprayGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
+const makeDestGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [21, 14, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.destroyer]),
+            TYPE: "bullet",
+        }
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -238,6 +247,12 @@ Class.bentMach = {
     ]
 }
 Class.dyadic = makeMulti("machinist", 2, "Dyadic")
+// dollarer upgrades
+Class.currency = {
+  	PARENT: "destroyer",
+  	LABEL: "Currency",
+  	GUNS
+}
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
