@@ -87,7 +87,7 @@ const makeGunnerGun = ({ length = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
 }
 const makeSprayGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [20, 8, 1, x, y, angle, delay],
+        POSITION: [18, 7, 1, x, y, angle, delay],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.basic, g.machineGun, g.lowPower, g.pelleter, { recoil: 1.15}]),
             TYPE: "bullet",
@@ -219,7 +219,7 @@ Class.catastrophe = {
     ]
 }
 Class.splasher = {
-  	PARENT: "machinist",
+  	PARENT: "sprayer",
   	LABEL: "Splasher",
   	GUNS: [
       	makeSprayGun({ y: t, angle: 8 }),
@@ -228,6 +228,16 @@ Class.splasher = {
       	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
     ]
 }
+Class.bentMach = {
+  	PARENT: "machineGun",
+  	LABEL: "Bent-Mach",
+  	GUNS: [
+      	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8 }),
+      	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 }),
+      	makeMachineGunGun({ width: 10 })
+    ]
+}
+Class.dyadic = makeMulti("machinist", 2, "Dyadic")
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
@@ -245,7 +255,7 @@ Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machinist")
 		Class.minigun.UPGRADES_TIER_3.push("machShot")
 		Class.sprayer.UPGRADES_TIER_3.push("ultimatum")
 		// machinist 
-		Class.machinist.UPGRADES_TIER_3 = ["megagun", "catastrophe", "splasher"]
+		Class.machinist.UPGRADES_TIER_3 = ["megagun", "catastrophe", "splasher", "bentMach", "dyadic"]
 Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.obliterator.UPGRADES_TIER_3 = ["demolitionist", "architect", "foctar", "exterminator", "eradicator", "mega3"]
 		Class.destroyer.UPGRADES_TIER_3.push("demolitionist")
