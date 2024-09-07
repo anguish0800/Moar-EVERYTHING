@@ -85,6 +85,15 @@ const makeGunnerGun = ({ length = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
+const makeSprayGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [20, 8, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic, g.machineGun, g.lowPower, g.pelleter, { recoil: 1.15}]),
+            TYPE: "bullet",
+        }
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -201,12 +210,21 @@ Class.catastrophe = {
   	PARENT: "gunner",
 		LABEL: "Catastrophe",
   	GUNS: [
-      	makeGunnerGun({ length: -2, y: -8, angle: -5}),
-      	makeGunnerGun({ length: -2, y: 8, angle: 5 }),
+      	makeGunnerGun({ length: -2, y: -8, angle: -8 }),
+      	makeGunnerGun({ length: -2, y: 8, angle: 8 }),
       	makeGunnerGun({ y: 7.25, delay: 1/3 }),
       	makeGunnerGun({ y: -7.25, delay: 1/3 }),
       	makeGunnerGun({ length: 4, y: 3.75, delay: 2/3 }),
       	makeGunnerGun({ length: 4, y: -3.75, delay: 2/3 })
+    ]
+}
+Class.splasher = {
+  	PARENT: "machinist",
+  	LABEL: "Splasher",
+  	GUNS: [
+      	makeSprayGun({ }).
+      	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8}),
+      	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
     ]
 }
 // upgrade paths
