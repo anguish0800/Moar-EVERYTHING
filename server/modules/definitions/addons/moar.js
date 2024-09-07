@@ -53,7 +53,20 @@ const makeAssGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => { // to sny immat
         }
     }
 }
-
+const makeRifleGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [20, 12, 1, x, y, angle, delay],
+    }
+}
+const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [20, 8, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic]),
+            TYPE: "bullet",
+        }
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -147,7 +160,7 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
 		// owl
-		Class.owl.UPGRADES_TIER_3 = ["griffin", "bentSnipe", "breaker"]
+		Class.owl.UPGRADES_TIER_3 = ["griffin", "dual", "bentSnipe", "breaker"]
 Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machinist")
 		Class.sabotager.UPGRADES_TIER_3 = ["foctar", "machShot", "vase", "ultimatum", "shower"]
 		Class.gunner.UPGRADES_TIER_3.push("vase")
