@@ -119,11 +119,21 @@ Class.griffin = {
   	PARENT: "assassin",
   	LABEL: "Griffin",
   	GUNS: [
+      {}
       	makeAssGun({ y: t - 1 }),
       	makeAssGun({ y: -t + 1, delay: 0.5 }),
       	{
-      			POSITION: [5, 17, -1.4, 8, 0, 0, 0]
+      			POSITION: [10, 17, -1.4, 3, 0, 0, 0]
       	}
+    ]
+}
+Class.bentSnipe = {
+  	PARENT: "sniper",
+  	LABEL: "Bent-Snipe",
+  	GUNS: [
+      	makeSnipeGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
+      	makeSnipeGun({ x: -2, y: 2, angle: 17, delay: 0.5}),
+      	makeSnipeGun({})
     ]
 }
 // upgrade paths
@@ -135,7 +145,7 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
 		// owl
-		Class.owl.UPGRADES_TIER_3 = ["griffin", "breaker"]
+		Class.owl.UPGRADES_TIER_3 = ["griffin", "bentSnipe", "breaker"]
 Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machinist")
 		Class.sabotager.UPGRADES_TIER_3 = ["foctar", "machShot", "vase", "ultimatum", "shower"]
 		Class.gunner.UPGRADES_TIER_3.push("vase")
