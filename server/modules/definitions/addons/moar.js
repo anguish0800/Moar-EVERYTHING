@@ -135,7 +135,11 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
 		// owl
-		Class.owl.UPGRADES_TIER_3 = ["griffin"]
-Class.machineGun.UPGRADES_TIER_2.push("machinist")
-Class.pounder.UPGRADES_TIER_2.push("dollarer")
+		Class.owl.UPGRADES_TIER_3 = ["griffin", "breaker"]
+Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machinist")
+		Class.sabotager.UPGRADES_TIER_3 = ["foctar", "vase", "machShot", "ultimatum", "shower"]
+		Class.gunner.UPGRADES_TIER_3.push("vase")
+		Class.minigun.UPGRADES_TIER_3.push("machShot")
+		Class.sprayer.UPGRADES_TIER_3.push("ultimatum")
+Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
