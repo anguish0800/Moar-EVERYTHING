@@ -222,7 +222,8 @@ Class.splasher = {
   	PARENT: "machinist",
   	LABEL: "Splasher",
   	GUNS: [
-      	makeSprayGun({ }).
+      	makeSprayGun({ y: t, angle: 8 }),
+      	makeSprayGun({ y: -t, angle: -8, delay: 0.5 }),
       	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8}),
       	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
     ]
@@ -244,7 +245,7 @@ Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machinist")
 		Class.minigun.UPGRADES_TIER_3.push("machShot")
 		Class.sprayer.UPGRADES_TIER_3.push("ultimatum")
 		// machinist 
-		Class.machinist.UPGRADES_TIER_3 = ["megagun", "catastrophe"]
+		Class.machinist.UPGRADES_TIER_3 = ["megagun", "catastrophe", "splasher"]
 Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.obliterator.UPGRADES_TIER_3 = ["demolitionist", "architect", "foctar", "exterminator", "eradicator", "mega3"]
 		Class.destroyer.UPGRADES_TIER_3.push("demolitionist")
