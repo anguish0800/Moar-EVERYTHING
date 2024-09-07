@@ -166,6 +166,8 @@ Class.canary = {
     ]
 }
 Class.crow = makeMulti("owl", 2, "crow")
+// machinist upgrades
+
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
