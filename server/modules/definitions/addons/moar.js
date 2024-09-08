@@ -103,6 +103,21 @@ const makeDestGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
+const makeLaunchGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [10, 9, 1, x, y, angle, delay]
+    }
+}
+const makeLaunchGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [17, 13, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.launcher]),
+            TYPE: "minimissile",
+          	STAT_CALCULATOR: "sustained"
+        }
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -201,7 +216,7 @@ Class.canary = {
       	makeMarksGun2({ y: -t, delay: 0.5 })
     ]
 }
-Class.crow = makeMulti("owl", 2, "crow")
+Class.crow = makeMulti("owl", 2, "Crow")
 // machinist upgrades
 Class.megagun = {
   	PARENT: "minigun",
@@ -259,9 +274,19 @@ Class.currency = {
       	makeDestGun({ y: -7, delay: 0.5 })
     ]
 }
+Class.catapult = {
+  	PARENT: "launcher",
+  	LABEL: "Catapult",
+  	GUNS: [
+      	makeLaunchGun({ y: 6.5, angle: 7 }),
+      	makeLaunchGun({ y: -6.5, angle: -7 }),
+      	makeLaunchGun2({ y: 6.5, angle: 7 }),
+      	makeLaunchGun2({ y: -6.5, angle: -7, delay: 0.5 })
+    ]
+}
 Class.bentPound = {
   	PARENT: "pounder",
-  	LABEL: "Bent-Pound",
+  	LABEL: Math.random() < 0.001 ? "Bent-💷" : "Bent-Pound",
   	GUNS: [
       	makePoundGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
       	makePoundGun({ x: -2, y: 2, angle: 17, delay: 0.5 }),
@@ -294,5 +319,5 @@ Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.artillery.UPGRADES_TIER_3.push("foctar")
 		Class.launcher.UPGRADES_TIER_3.push("exterminator")
 		// dollarer
-		Class.dollarer.UPGRADES_TIER_3 = ["currency", "bentPound", "extinguisher"]
+		Class.dollarer.UPGRADES_TIER_3 = ["currency", "bentPound", "catapult", "extinguisher"]
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
