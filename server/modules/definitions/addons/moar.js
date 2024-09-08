@@ -184,7 +184,7 @@ Class.griffin = {
   	LABEL: "Griffin",
   	GUNS: [
       	{
-          	POSITION: [6, 25, -0.4, -6, 0, 0, 0]
+          	POSITION: [6, 25, -0.4, -4, 0, 0, 0]
         },
       	makeAssGun({ y: t - 1 }),
       	makeAssGun({ y: -t + 1, delay: 0.5 }),
