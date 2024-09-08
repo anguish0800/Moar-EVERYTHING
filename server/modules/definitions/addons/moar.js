@@ -323,8 +323,8 @@ Class.faucile = {
   	PARENT: "artillery",
   	LABEL: "Faucile",
   	GUNS: [
-      	makeArtGunSide({ y: t + 1.5 }),
-      	makeArtGunSide({ y: -t - 1.5, delay: 0.5 }),
+      	makeArtGunSide({ y: t + 4.5 }),
+      	makeArtGunSide({ y: -t - 4.5, delay: 0.5 }),
       	makeArtGun({ y: t + 1 }),
       	makeArtGun({ y: -t - 1, delay: 0.5 })
     ]
