@@ -278,6 +278,12 @@ Class.catapult = {
   	PARENT: "launcher",
   	LABEL: "Catapult",
   	GUNS: [
+      	{
+          	POSITION: [3, 17, -0.4, -3, 6.5, 7, 0]
+        },
+      	{
+          	POSITION: [3, 17, -0.4, -3, -6.5, -7, 0]
+        },
       	makeLaunchGun({ y: 6.5, angle: 7 }),
       	makeLaunchGun({ y: -6.5, angle: -7 }),
       	makeLaunchGun2({ y: 6.5, angle: 7 }),
