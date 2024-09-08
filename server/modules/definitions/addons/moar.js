@@ -118,6 +118,26 @@ const makeLaunchGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
+const makeArtGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [19, 12, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.artillery]),
+            TYPE: "bullet",
+          	LABEL: "Heavy"
+        }
+    }
+}
+const makeArtGunSide = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [17, 3, 1, x, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.basic, g.pelleter, g.artillery]),
+            TYPE: "bullet",
+          	LABEL: "Secondary"
+        }
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -303,7 +323,10 @@ Class.faucile = {
   	PARENT: "artillery",
   	LABEL: "Faucile",
   	GUNS: [
-      	makePoundGun({})
+      	makeArtGunSide({ y: t + 1.5 }),
+      	makeArtGunSide({ y: -t - 1.5, delay: 0.5 }),
+      	makeArtGun({ y: t + 1 }),
+      	makeArtGun({ y: -t - 1, delay: 0.5 })
     ]
 }
 Class.extinguisher = makeMulti("dollarer", 2, "Extinguisher")
@@ -332,5 +355,5 @@ Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.artillery.UPGRADES_TIER_3.push("foctar")
 		Class.launcher.UPGRADES_TIER_3.push("exterminator")
 		// dollarer
-		Class.dollarer.UPGRADES_TIER_3 = ["currency", "bentPound", "catapult", "extinguisher"]
+		Class.dollarer.UPGRADES_TIER_3 = ["currency", "faucile", "bentPound", "catapult", "extinguisher"]
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
