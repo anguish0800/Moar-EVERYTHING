@@ -105,7 +105,7 @@ const makeDestGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
 }
 const makeLaunchGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [10, 9, 1, x, y, angle, delay]
+        POSITION: [10, 9, 1, 9 + x, y, angle, delay]
     }
 }
 const makeLaunchGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
@@ -184,7 +184,7 @@ Class.griffin = {
   	LABEL: "Griffin",
   	GUNS: [
       	{
-          	POSITION: [6, 21, -0.4, -9, 0, 0, 0]
+          	POSITION: [6, 25, -0.4, -6, 0, 0, 0]
         },
       	makeAssGun({ y: t - 1 }),
       	makeAssGun({ y: -t + 1, delay: 0.5 }),
@@ -268,7 +268,7 @@ Class.currency = {
   	LABEL: "Currency",
   	GUNS: [
       	{
-          	POSITION: [3, 28, -0.4, -3, 0, 0, 0]
+          	POSITION: [6, 28, -0.4, -6, 0, 0, 0]
         },
       	makeDestGun({ y: 7 }),
       	makeDestGun({ y: -7, delay: 0.5 })
