@@ -299,6 +299,13 @@ Class.bentPound = {
       	makePoundGun({})
     ]
 }
+Class.faucile = {
+  	PARENT: "artillery",
+  	LABEL: "Faucile",
+  	GUNS: [
+      	makePoundGun({})
+    ]
+}
 Class.extinguisher = makeMulti("dollarer", 2, "Extinguisher")
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
