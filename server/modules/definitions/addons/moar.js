@@ -162,7 +162,7 @@ Class.dollarer = {
   	LABEL: "Dollarer",
   	GUNS: [
       	{
-          	POSITION: [6, 25, -0.4, -6, 0, 0, 0]
+          	POSITION: [6, 25, 0, -6, 0, 0, 0]
         },
       	makePoundGun({ y: t + 1 }),
       	makePoundGun({ y: -t - 1, delay: 0.5})
@@ -184,7 +184,7 @@ Class.griffin = {
   	LABEL: "Griffin",
   	GUNS: [
       	{
-          	POSITION: [6, 25, -0.4, -4, 0, 0, 0]
+          	POSITION: [6, 25, 0, -4, 0, 0, 0]
         },
       	makeAssGun({ y: t - 1 }),
       	makeAssGun({ y: -t + 1, delay: 0.5 }),
@@ -268,7 +268,7 @@ Class.currency = {
   	LABEL: "Currency",
   	GUNS: [
       	{
-          	POSITION: [6, 28, -0.4, -6, 0, 0, 0]
+          	POSITION: [6, 28, 0, -6, 0, 0, 0]
         },
       	makeDestGun({ y: 7 }),
       	makeDestGun({ y: -7, delay: 0.5 })
@@ -279,10 +279,10 @@ Class.catapult = {
   	LABEL: "Catapult",
   	GUNS: [
       	{
-          	POSITION: [3, 17, -0.4, -3, 6.5, 7, 0]
+          	POSITION: [3, 17, 0, -4, 4.5, 7, 0]
         },
       	{
-          	POSITION: [3, 17, -0.4, -3, -6.5, -7, 0]
+          	POSITION: [3, 17, 0, -4, -4.5, -7, 0]
         },
       	makeLaunchGun({ y: 6.5, angle: 7 }),
       	makeLaunchGun({ y: -6.5, angle: -7 }),
