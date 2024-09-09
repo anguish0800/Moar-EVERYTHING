@@ -415,6 +415,15 @@ Class.TRAsnipe = makeAuto("sniper", "TR-Turreted Sniper", {type: "TRturret", siz
 Class.Ahunt = makeAuto("hunter")
 Class.Arifle = makeAuto("rifle")
 Class.Amarks = makeAuto("marksman")
+// Amachine upgrades
+Class.TAmach = makeAuto("machineGun", "T-Turreted Mach", {type: "Tturret", size: 11})
+Class.SAmach = makeAuto("machineGun", "S-Turreted Mach", {type: "Sturret", size: 11})
+Class.MGAmach = makeAuto("machineGun", "Mg-Turreted Mach", {type: "MGturret", size: 11})
+Class.FGAmach = makeAuto("machineGun", "Fg-Turreted Mach", {type: "FGturret", size: 11})
+Class.DAmach = makeAuto("machineGun", "D-Turreted Mach", {type: "Dturret", size: 11})
+Class.PAmach = makeAuto("machineGun", "P-Turreted Mach", {type: "Pturret", size: 11})
+Class.TRAmach = makeAuto("machineGun", "TR-Turreted Mach", {type: "TRturret", size: 11})
+Class.Aspray = makeAuto("sprayer")
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
