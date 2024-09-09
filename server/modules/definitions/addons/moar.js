@@ -138,6 +138,7 @@ const makeArtGunSide = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
+
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -338,7 +339,12 @@ Class.fungus = {
   	PARENT: "trapper",
   	LABEL: "Fungus",
   	GUNS: [
-      	
+      	makeTrapGun2({ x: -2, y: -2, angle: -17 }),
+      	makeTrapGun2({ x: -2, y: 2, angle: 17 }),
+      	makeTrapGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
+      	makeTrapGun({ x: -2, y: 2, angle: 17, delay: 0.5 }),
+      	makeTrapGun2({}),
+      	makeTrapGun({})
     ]
 }
 // upgrade paths
@@ -382,3 +388,5 @@ Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.doubleTwin.UPGRADES_TIER_3.push("extinguisher")
 		Class.tripleShot.UPGRADES_TIER_3.push("bentPound")
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
+		// caltropper
+		Class.caltropper.UPGRADES_TIER_3 = ["fungus"]
