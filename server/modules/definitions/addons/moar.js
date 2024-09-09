@@ -396,7 +396,13 @@ Class.Apound = makeAuto("pounder")
 Class.Atrap = makeAuto("trapper")
 Class.Adesmos = makeAuto("desmos")
 // Atwin upgrades
-Class.TAtwin = makeAuto("twin", "Twin-Turreted Twin", {type: "Tturret", size: 11})
+Class.TAtwin = makeAuto("twin", "T-Turreted Twin", {type: "Tturret", size: 11})
+Class.SAtwin = makeAuto("twin", "S-Turreted Twin", {type: "Sturret", size: 11})
+Class.MGAtwin = makeAuto("twin", "Mg-Turreted Twin", {type: "MGturret", size: 11})
+Class.FGAtwin = makeAuto("twin", "Fg-Turreted Twin", {type: "FGturret", size: 11})
+Class.DAtwin = makeAuto("twin", "D-Turreted Twin", {type: "Dturret", size: 11})
+Class.PAtwin = makeAuto("twin", "P-Turreted Twin", {type: "Pturret", size: 11})
+Class.TRAtwin = makeAuto("twin", "TR-Turreted Twin", {type: "TRturret", size: 11})
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
