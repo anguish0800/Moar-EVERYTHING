@@ -324,7 +324,7 @@ Class.faucile = {
   	LABEL: "Faucile",
   	GUNS: [
       	{
-          	POSITION: [6, 26.4, 0, -6, 0, 0, 0]
+          	POSITION: [6, 28.4, 0, -6, 0, 0, 0]
         },
       	makeArtGunSide({ y: t * 2.4 }),
       	makeArtGunSide({ y: -t * 2.4, delay: 0.5 }),
