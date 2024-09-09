@@ -333,6 +333,14 @@ Class.faucile = {
     ]
 }
 Class.extinguisher = makeMulti("dollarer", 2, "Extinguisher")
+// caltropper upgrades
+Class.fungus = {
+  	PARENT: "trapper",
+  	LABEL: "Fungus",
+  	GUNS: [
+      	
+    ]
+}
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
@@ -342,7 +350,7 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.rifle.UPGRADES_TIER_3.push("assault")
 		Class.marksman.UPGRADES_TIER_3.push("husk")
 		// owl
-		Class.owl.UPGRADES_TIER_3 = ["griffin", "dual", "megagun",  "musket", "canary", "crow", "bentSnipe", "breaker"]
+		Class.owl.UPGRADES_TIER_3 = ["griffin", "dual", "megagun",  "musket", "canary", "bentSnipe", "crow", "breaker"]
 		Class.assassin.UPGRADES_TIER_3.push("griffin")
 		Class.marksman.UPGRADES_TIER_3.push("canary")
 		Class.doubleTwin.UPGRADES_TIER_3.push("crow")
@@ -367,5 +375,10 @@ Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.artillery.UPGRADES_TIER_3.push("foctar")
 		Class.launcher.UPGRADES_TIER_3.push("exterminator")
 		// dollarer
-		Class.dollarer.UPGRADES_TIER_3 = ["currency", "faucile", "bentPound", "catapult", "extinguisher"]
+		Class.dollarer.UPGRADES_TIER_3 = ["currency", "faucile", "catapult", "bentPound", "extinguisher", "eradicator"]
+		Class.destroyer.UPGRADES_TIER_3.push("currency")
+		Class.artillery.UPGRADES_TIER_3.push("faucile")
+		Class.launcher.UPGRADES_TIER_3.push("catapult")
+		Class.doubleTwin.UPGRADES_TIER_3.push("extinguisher")
+		Class.tripleShot.UPGRADES_TIER_3.push("bentPound")
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
