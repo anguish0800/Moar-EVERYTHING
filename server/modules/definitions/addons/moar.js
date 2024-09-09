@@ -138,7 +138,21 @@ const makeArtGunSide = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
-
+const makeBuildGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [18, 12, 1, x, y, angle, delay],
+    }
+}
+const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+    return {
+        POSITION: [2, 8, 1.1, x + 18, y, angle, delay],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.trap, g.setTrap]),
+            TYPE: "setTrap",
+          	STAT_CALCULATOR: "block"
+        }
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
