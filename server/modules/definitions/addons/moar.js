@@ -378,10 +378,22 @@ Class.triTrapper.UPGRADES_TIER_3 = ["fortress", "hexaTrapper", "architect"]
 // 🖕 septa trapper, never missed ya, you were just a carbon copy of hexa trapper.
 // regards, anguish.
 // autos (oh boy the amount of makeAutos is just making me insane)
+// turrets
 Class.Tturret = makeTurret("twin")
 Class.Sturret = makeTurret("sniper")
 Class.MGturret = makeTurret("machineGun")
+Class.FGturret = makeTurret("flankGuard")
+Class.Dturret = makeTurret("director")
 Class.Pturret = makeTurret("pounder")
+Class.TRturret = makeTurret("trapper")
+// tanks themselves
+Class.Atwin = makeAuto("twin")
+Class.Asnipe = makeAuto("sniper")
+Class.Amachine = makeAuto("machineGun")
+Class.Aflank = makeAuto("flankGuard")
+Class.Adirect = makeAuto("director")
+Class.Apound = makeAuto("pounder")
+Class.Atrap = makeAuto("trapper")
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
