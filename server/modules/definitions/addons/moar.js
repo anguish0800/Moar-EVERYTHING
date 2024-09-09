@@ -394,7 +394,11 @@ Class.Aflank = makeAuto("flankGuard")
 Class.Adirect = makeAuto("director")
 Class.Apound = makeAuto("pounder")
 Class.Atrap = makeAuto("trapper")
+Class.Adesmos = makeAuto("desmos")
+// Atwin upgrades
+Class.TAtwin = makeAuto("twin", {type: "Tturret"})
 // upgrade paths
+// flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
 		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
@@ -437,3 +441,6 @@ Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		// caltropper
 		Class.caltropper.UPGRADES_TIER_3 = ["creator", "fungus", "artist"]
+// autos
+Class.twin.UPGRADES_TIER_2.push("Atwin")
+		Class.Atwin.UPGRADES_TIER_3 = ["TAtwin"]
