@@ -405,6 +405,16 @@ Class.PAtwin = makeAuto("twin", "P-Turreted Twin", {type: "Pturret", size: 11})
 Class.TRAtwin = makeAuto("twin", "TR-Turreted Twin", {type: "TRturret", size: 11})
 Class.AtriShot = makeAuto("tripleShot")
 // Asnipe upgrades
+Class.TAsnipe = makeAuto("sniper", "T-Turreted Sniper", {type: "Tturret", size: 11})
+Class.SAsnipe = makeAuto("sniper", "S-Turreted Sniper", {type: "Sturret", size: 11})
+Class.MGAsnipe = makeAuto("sniper", "Mg-Turreted Sniper", {type: "MGturret", size: 11})
+Class.FGAsnipe = makeAuto("sniper", "Fg-Turreted Sniper", {type: "FGturret", size: 11})
+Class.DAsnipe = makeAuto("sniper", "D-Turreted Sniper", {type: "Dturret", size: 11})
+Class.PAsnipe = makeAuto("sniper", "P-Turreted Sniper", {type: "Pturret", size: 11})
+Class.TRAsnipe = makeAuto("sniper", "TR-Turreted Sniper", {type: "TRturret", size: 11})
+Class.Ahunt = makeAuto("hunter")
+Class.Arifle = makeAuto("rifle")
+Class.Amarks = makeAuto("marksman")
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
@@ -450,5 +460,10 @@ Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		// caltropper
 		Class.caltropper.UPGRADES_TIER_3 = ["creator", "fungus", "artist"]
 // autos
+//twin
 Class.twin.UPGRADES_TIER_2.push("Atwin")
+		Class.tripleShot.UPGRADES_TIER_3.push("AtriShot")
 		Class.Atwin.UPGRADES_TIER_3 = ["AtriShot", "autoDouble", "TAtwin", "SAtwin", "MGAtwin", "FGAtwin", "DAtwin", "PAtwin", "TRAtwin"]
+//sniper
+Class.sniper.UPGRADES_TIER_2.push("Asnipe")
+		Class.Asnipe.UPGRADES_TIER_2 = ["autoAssassin", "Ahunt", "Arifle", "Amarks", "TAsnipe", "SAsnipe", "MGAsnipe", "FGAsnipe", "DAsnipe", "PAsnipe", "TRAsnipe"]
