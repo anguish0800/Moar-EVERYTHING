@@ -424,6 +424,7 @@ Class.DAmach = makeAuto("machineGun", "D-Turreted Mach", {type: "Dturret", size:
 Class.PAmach = makeAuto("machineGun", "P-Turreted Mach", {type: "Pturret", size: 11})
 Class.TRAmach = makeAuto("machineGun", "TR-Turreted Mach", {type: "TRturret", size: 11})
 Class.Aspray = makeAuto("sprayer")
+Class.Aminigun = makeAuto("minigun")
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
