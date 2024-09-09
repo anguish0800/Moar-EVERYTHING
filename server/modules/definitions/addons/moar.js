@@ -404,6 +404,7 @@ Class.DAtwin = makeAuto("twin", "D-Turreted Twin", {type: "Dturret", size: 11})
 Class.PAtwin = makeAuto("twin", "P-Turreted Twin", {type: "Pturret", size: 11})
 Class.TRAtwin = makeAuto("twin", "TR-Turreted Twin", {type: "TRturret", size: 11})
 Class.AtriShot = makeAuto("tripleShot")
+// Asnipe upgrades
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
