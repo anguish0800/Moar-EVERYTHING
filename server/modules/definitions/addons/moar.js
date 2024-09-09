@@ -143,9 +143,9 @@ const makeBuildGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         POSITION: [18, 12, 1, x, y, angle, delay],
     }
 }
-const makeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeBuildGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [2, 8, 1.1, x + 18, y, angle, delay],
+        POSITION: [2, 12, 1.1, x + 18, y, angle, delay],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.trap, g.setTrap]),
             TYPE: "setTrap",
@@ -361,6 +361,20 @@ Class.fungus = {
       	makeTrapGun({})
     ]
 }
+Class.creator = {
+  	PARENT: "builder",
+  	LABEL: "Creator",
+  	GUNS: [
+      	makeBuildGun({ angle: 45 }),
+      	makeBuildGun({ angle: -45 }),
+      	makeBuildGun2({ angle: 45 }),
+      	makeBuildGun2({ angle: -45, delay: 0.5 })
+    ]
+}
+Class.artist = makeMulti("caltropper", 2, "artist")
+// remove turret from hexa trapper and remove septa trapper because I said so
+Class.hexaTrapper.TURRETS = []
+// removed septa trapper from Tanks.js (just remove the upgrade path to it if you want or remove its def if you also want)
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
@@ -403,4 +417,4 @@ Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.tripleShot.UPGRADES_TIER_3.push("bentPound")
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		// caltropper
-		Class.caltropper.UPGRADES_TIER_3 = ["fungus"]
+		Class.caltropper.UPGRADES_TIER_3 = ["creator", "fungus", "artist"]
