@@ -1,4 +1,4 @@
-const { combineStats, makeAuto, makeOver, makeDeco, makeGuard, makeBird, makeMulti, makeRadialAuto } = require('../facilitators.js');
+const { combineStats, makeAuto, makeTurret, makeOver, makeDeco, makeGuard, makeBird, makeMulti, makeRadialAuto } = require('../facilitators.js');
 const { base, statnames, gunCalcNames, dfltskl, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 // references
@@ -374,7 +374,14 @@ Class.creator = {
 Class.artist = makeMulti("caltropper", 2, "artist")
 // remove turret from hexa trapper and remove septa trapper because I said so
 Class.hexaTrapper.TURRETS = []
-// removed septa trapper from Tanks.js (just remove the upgrade path to it if you want or remove its def if you also want)
+Class.triTrapper.UPGRADES_TIER_3 = ["fortress", "hexaTrapper", "architect"]
+// 🖕 septa trapper, never missed ya, you were just a carbon copy of hexa trapper.
+// regards, anguish.
+// autos (oh boy the amount of makeAutos is just making me insane)
+Class.Tturret = makeTurret("twin")
+Class.Sturret = makeTurret("sniper")
+Class.MGturret = makeTurret("machineGun")
+Class.Pturret = makeTurret("pounder")
 // upgrade paths
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
