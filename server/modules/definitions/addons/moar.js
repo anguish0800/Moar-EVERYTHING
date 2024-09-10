@@ -437,6 +437,15 @@ Class.Ahexa = makeAuto("hexaTank")
 Class.Aauto3 = makeAuto("auto3")
 Class.AtrapGuard = makeAuto("trapGuard")
 Class.AtriTrap = makeAuto("triTrapper")
+// Adirect upgrades
+Class.TAdir = makeAuto("director", "T-Turreted Director", {type: "Tturret", size: 11})
+Class.SAdir = makeAuto("director", "S-Turreted Director", {type: "Sturret", size: 11})
+Class.MGAdir = makeAuto("director", "Mg-Turreted Director", {type: "MGturret", size: 11})
+Class.FGAdir = makeAuto("director", "Fg-Turreted Director", {type: "FGturret", size: 11})
+Class.DAdir = makeAuto("director", "D-Turreted Director", {type: "Dturret", size: 11})
+Class.PAdir = makeAuto("director", "P-Turreted Director", {type: "Pturret", size: 11})
+Class.TRAdir = makeAuto("director", "Tr-Turreted Director", {type: "TRturret", size: 11})
+Class.Aunder = makeAuto("underseer")
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
@@ -497,10 +506,14 @@ Class.machineGun.UPGRADES_TIER_2.push("Amachine")
 		Class.sprayer.UPGRADES_TIER_3.push("Aspray")
 		Class.minigun.UPGRADES_TIER_3.push("Aminigun")
 		Class.Amachine.UPGRADES_TIER_3 = ["Aminigun", "autoGunner", "Aspray", "TAmach", "SAmach", "MGAmach", "FGAmach", "DAmach", "PAmach", "TRAmach"]
-//flank
+//flank guard
 Class.flankGuard.UPGRADES_TIER_2.push("Aflank")
 		Class.hexaTank.UPGRADES_TIER_3.push("Ahexa")
 		Class.trapGuard.UPGRADES_TIER_3.push("AtrapGuard")
 		Class.auto3.UPGRADES_TIER_3.push("Aauto3")
 		Class.triTrapper.UPGRADES_TIER_3.push("AtriTrap")
 		Class.Aflank.UPGRADES_TIER_3 = ["Ahexa", "autoTriAngle", "Aauto3", "AtrapGuard", "AtriTrap", "TAflank", "SAflank", "MGAflank", "FGAflank", "DAflank", "PAflank", "TRAflank"]
+//director
+Class.director.UPGRADES_TIER_2.push("Adirect")
+		Class.underseer.UPGRADES_TIER_3.push("Aunder")
+		Class.Adirect.UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "Aunder", "autoSpawner", "TAdir", "SAdir", "MGAdir", "FGAdir", "DAdir", "PAdir", "TRAdir"]
