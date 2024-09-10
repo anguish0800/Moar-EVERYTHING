@@ -427,13 +427,13 @@ Class.Aspray = makeAuto("sprayer")
 Class.Aminigun = makeAuto("minigun")
 // Aflank upgrades
 Class.TAflank = makeAuto("flankGuard", "T-Turreted Flank", {type: "Tturret", size: 11})
-Class.SAflank = makeAuto("", "S-Turreted ", {type: "Sturret", size: 11})
-Class.MGAflank = makeAuto("", "Mg-Turreted ", {type: "MGturret", size: 11})
-Class.FGAflank = makeAuto("", "Fg-Turreted ", {type: "FGturret", size: 11})
-Class.DAflank = makeAuto("", "D-Turreted ", {type: "Dturret", size: 11})
-Class.PAflank = makeAuto("", "P-Turreted ", {type: "Pturret", size: 11})
-Class.TRAflank = makeAuto("", "TR-Turreted ", {type: "TRturret", size: 11})
-Class.A = makeAuto("")
+Class.SAflank = makeAuto("flankGuard", "S-Turreted Flank", {type: "Sturret", size: 11})
+Class.MGAflank = makeAuto("flankGuard", "Mg-Turreted Flank", {type: "MGturret", size: 11})
+Class.FGAflank = makeAuto("flankGuard", "Fg-Turreted Flank", {type: "FGturret", size: 11})
+Class.DAflank = makeAuto("flankGuard", "D-Turreted Flank", {type: "Dturret", size: 11})
+Class.PAflank = makeAuto("flankGuard", "P-Turreted Flank", {type: "Pturret", size: 11})
+Class.TRAflank = makeAuto("flankGuard", "TR-Turreted Flank", {type: "TRturret", size: 11})
+Class.Ahexa = makeAuto("hexaTank")
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
@@ -477,7 +477,7 @@ Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.tripleShot.UPGRADES_TIER_3.push("bentPound")
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		// caltropper
-		Class.caltropper.UPGRADES_TIER_3 = ["creator", "fungus", "artist", "hexaTrapper"]
+		Class.caltropper.UPGRADES_TIER_3 = ["creator", "fungus", "artist", "hexaTrapper", "bulwark"]
 		Class.builder.UPGRADES_TIER_3.push("creator")
 		Class.doubleTwin.UPGRADES_TIER_3.push("artist")
 		Class.tripleShot.UPGRADES_TIER_3.push("fungus")
