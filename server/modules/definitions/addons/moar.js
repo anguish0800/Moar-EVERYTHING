@@ -455,14 +455,11 @@ const shtuff = [
   	{ name: "P", turretType: "Pturret" },
   	{ name: "Tr", turretType: "TRturret" }
 ]
-for (let i = 0; i < Class.basic.UPGRADES_TIER_1.length; i++) {
-  	Class["A" + i].TURRETS.push(
-      	{
-          	POSITION: [10, 0, 0, 180, 360, 1],
-          	TYPE: ""
-        }
-    )
-}
+console.log(Class.basic.UPGRADES_TIER_1)
+/*for (let i = 0; i < Class.basic.UPGRADES_TIER_1.length; i++) {
+  	Class["A" + i] = makeAuto(i)
+  	Class.basic.UPGRADES_TIER_1.push("A" + i)
+}*/
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
@@ -512,7 +509,7 @@ Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		Class.tripleShot.UPGRADES_TIER_3.push("fungus")
 // autos
 //twin
-Class.twin.UPGRADES_TIER_2.push("Atwin")
+/*Class.twin.UPGRADES_TIER_2.push("Atwin")
 		Class.tripleShot.UPGRADES_TIER_3.push("AtriShot")
 		Class.Atwin.UPGRADES_TIER_3 = ["AtriShot", "autoDouble", "TAtwin", "SAtwin", "MGAtwin", "FGAtwin", "DAtwin", "PAtwin", "TRAtwin"]
 //sniper
@@ -533,4 +530,4 @@ Class.flankGuard.UPGRADES_TIER_2.push("Aflank")
 //director
 Class.director.UPGRADES_TIER_2.push("Adirect")
 		Class.underseer.UPGRADES_TIER_3.push("Aunder")
-		Class.Adirect.UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "Aunder", "autoSpawner", "TAdir", "SAdir", "MGAdir", "FGAdir", "DAdir", "PAdir", "TRAdir"]
+		Class.Adirect.UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "Aunder", "autoSpawner", "TAdir", "SAdir", "MGAdir", "FGAdir", "DAdir", "PAdir", "TRAdir"]*/
