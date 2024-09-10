@@ -476,4 +476,9 @@ Class.twin.UPGRADES_TIER_2.push("Atwin")
 		Class.Atwin.UPGRADES_TIER_3 = ["AtriShot", "autoDouble", "TAtwin", "SAtwin", "MGAtwin", "FGAtwin", "DAtwin", "PAtwin", "TRAtwin"]
 //sniper
 Class.sniper.UPGRADES_TIER_2.push("Asnipe")
-		Class.Asnipe.UPGRADES_TIER_2 = ["autoAssassin", "Ahunt", "Arifle", "Amarks", "TAsnipe", "SAsnipe", "MGAsnipe", "FGAsnipe", "DAsnipe", "PAsnipe", "TRAsnipe"]
+		Class.Asnipe.UPGRADES_TIER_2 = ["autoAssassin", "Ahunt", "Arifle", "Aminigun", "Amarks", "TAsnipe", "SAsnipe", "MGAsnipe", "FGAsnipe", "DAsnipe", "PAsnipe", "TRAsnipe"]
+//machine gun
+Class.machineGun.UPGRADES_TIER_2.push("Amachine")
+		Class.sprayer.UPGRADES_TIER_3.push("Aspray")
+		Class.minigun.UPGRADES_TIER_3.push("Aminigun")
+		Class.Amachine.UPGRADES_TIER_3 = ["Aminigun", "autoGunner", "Aspray", "TAmach", "SAmach", "MGAmach", "FGAmach", "DAmach", "PAmach", "TRAmach"]
