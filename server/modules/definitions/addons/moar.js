@@ -402,7 +402,7 @@ Class.MGAtwin = makeAuto("twin", "Mg-Turreted Twin", {type: "MGturret", size: 11
 Class.FGAtwin = makeAuto("twin", "Fg-Turreted Twin", {type: "FGturret", size: 11})
 Class.DAtwin = makeAuto("twin", "D-Turreted Twin", {type: "Dturret", size: 11})
 Class.PAtwin = makeAuto("twin", "P-Turreted Twin", {type: "Pturret", size: 11})
-Class.TRAtwin = makeAuto("twin", "TR-Turreted Twin", {type: "TRturret", size: 11})
+Class.TRAtwin = makeAuto("twin", "Tr-Turreted Twin", {type: "TRturret", size: 11})
 Class.AtriShot = makeAuto("tripleShot")
 // Asnipe upgrades
 Class.TAsnipe = makeAuto("sniper", "T-Turreted Sniper", {type: "Tturret", size: 11})
@@ -411,7 +411,7 @@ Class.MGAsnipe = makeAuto("sniper", "Mg-Turreted Sniper", {type: "MGturret", siz
 Class.FGAsnipe = makeAuto("sniper", "Fg-Turreted Sniper", {type: "FGturret", size: 11})
 Class.DAsnipe = makeAuto("sniper", "D-Turreted Sniper", {type: "Dturret", size: 11})
 Class.PAsnipe = makeAuto("sniper", "P-Turreted Sniper", {type: "Pturret", size: 11})
-Class.TRAsnipe = makeAuto("sniper", "TR-Turreted Sniper", {type: "TRturret", size: 11})
+Class.TRAsnipe = makeAuto("sniper", "Tr-Turreted Sniper", {type: "TRturret", size: 11})
 Class.Ahunt = makeAuto("hunter")
 Class.Arifle = makeAuto("rifle")
 Class.Amarks = makeAuto("marksman")
@@ -422,7 +422,7 @@ Class.MGAmach = makeAuto("machineGun", "Mg-Turreted Mach", {type: "MGturret", si
 Class.FGAmach = makeAuto("machineGun", "Fg-Turreted Mach", {type: "FGturret", size: 11})
 Class.DAmach = makeAuto("machineGun", "D-Turreted Mach", {type: "Dturret", size: 11})
 Class.PAmach = makeAuto("machineGun", "P-Turreted Mach", {type: "Pturret", size: 11})
-Class.TRAmach = makeAuto("machineGun", "TR-Turreted Mach", {type: "TRturret", size: 11})
+Class.TRAmach = makeAuto("machineGun", "Tr-Turreted Mach", {type: "TRturret", size: 11})
 Class.Aspray = makeAuto("sprayer")
 Class.Aminigun = makeAuto("minigun")
 // Aflank upgrades
@@ -432,8 +432,10 @@ Class.MGAflank = makeAuto("flankGuard", "Mg-Turreted Flank", {type: "MGturret", 
 Class.FGAflank = makeAuto("flankGuard", "Fg-Turreted Flank", {type: "FGturret", size: 11})
 Class.DAflank = makeAuto("flankGuard", "D-Turreted Flank", {type: "Dturret", size: 11})
 Class.PAflank = makeAuto("flankGuard", "P-Turreted Flank", {type: "Pturret", size: 11})
-Class.TRAflank = makeAuto("flankGuard", "TR-Turreted Flank", {type: "TRturret", size: 11})
+Class.TRAflank = makeAuto("flankGuard", "Tr-Turreted Flank", {type: "TRturret", size: 11})
 Class.Ahexa = makeAuto("hexaTank")
+Class.Aauto3 = makeAuto("auto3")
+Class.AtriTrap = makeAuto("triTrapper")
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
@@ -494,3 +496,7 @@ Class.machineGun.UPGRADES_TIER_2.push("Amachine")
 		Class.sprayer.UPGRADES_TIER_3.push("Aspray")
 		Class.minigun.UPGRADES_TIER_3.push("Aminigun")
 		Class.Amachine.UPGRADES_TIER_3 = ["Aminigun", "autoGunner", "Aspray", "TAmach", "SAmach", "MGAmach", "FGAmach", "DAmach", "PAmach", "TRAmach"]
+//flank
+Class.flankGuard.UPGRADES_TIER_2.push("Aflank")
+		Class.hexaTank.UPGRADES_TIER_3.push("Ahexa")
+		
