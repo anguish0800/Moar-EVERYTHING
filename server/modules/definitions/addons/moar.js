@@ -446,6 +446,11 @@ Class.DAdir = makeAuto("director", "D-Turreted Director", {type: "Dturret", size
 Class.PAdir = makeAuto("director", "P-Turreted Director", {type: "Pturret", size: 11})
 Class.TRAdir = makeAuto("director", "Tr-Turreted Director", {type: "TRturret", size: 11})
 Class.Aunder = makeAuto("underseer")*/ 
+const shtuff = [
+  	{ name: "T", turretType: "Tturret" },
+  	{ name: "S", turretType: "Sturret" },
+  	{ name: "Mg", turretType: "MGturret"},
+]
 for (let i = 0; i < 8; i++) {
   	
 }
