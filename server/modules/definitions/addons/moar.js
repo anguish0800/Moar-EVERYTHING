@@ -449,10 +449,18 @@ Class.Aunder = makeAuto("underseer")*/
 const shtuff = [
   	{ name: "T", turretType: "Tturret" },
   	{ name: "S", turretType: "Sturret" },
-  	{ name: "Mg", turretType: "MGturret"},
+  	{ name: "Mg", turretType: "MGturret" },
+  	{ name: "Fg", turretType: "FGturret" },
+  	{ name: "D", turretType: "Dturret" },
+  	{ name: "P", turretType: "Pturret" },
+  	{ name: "Tr", turretType: "TRturret" }
 ]
-for (let i = 0; i < 8; i++) {
-  	
+for (let i = 0; i < Class.basic.UPGRADES_TIER_1.length; i++) {
+  	Class["A" + i].TURRETS.push(
+      	{
+          	POSITION: [10, 0, 0, 180, 360, 1]
+        }
+    )
 }
 // upgrade paths
 // flanks and twins
