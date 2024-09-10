@@ -458,7 +458,8 @@ const shtuff = [
 for (let i = 0; i < Class.basic.UPGRADES_TIER_1.length; i++) {
   	Class["A" + i].TURRETS.push(
       	{
-          	POSITION: [10, 0, 0, 180, 360, 1]
+          	POSITION: [10, 0, 0, 180, 360, 1],
+          	TYPE: ""
         }
     )
 }
