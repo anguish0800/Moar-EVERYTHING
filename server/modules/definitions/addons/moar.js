@@ -435,6 +435,7 @@ Class.PAflank = makeAuto("flankGuard", "P-Turreted Flank", {type: "Pturret", siz
 Class.TRAflank = makeAuto("flankGuard", "Tr-Turreted Flank", {type: "TRturret", size: 11})
 Class.Ahexa = makeAuto("hexaTank")
 Class.Aauto3 = makeAuto("auto3")
+Class.AtrapGuard = makeAuto("trapGuard")
 Class.AtriTrap = makeAuto("triTrapper")
 // upgrade paths
 // flanks and twins
@@ -499,4 +500,7 @@ Class.machineGun.UPGRADES_TIER_2.push("Amachine")
 //flank
 Class.flankGuard.UPGRADES_TIER_2.push("Aflank")
 		Class.hexaTank.UPGRADES_TIER_3.push("Ahexa")
-		
+		Class.trapGuard.UPGRADES_TIER_3.push("AtrapGuard")
+		Class.auto3.UPGRADES_TIER_3.push("Aauto3")
+		Class.triTrapper.UPGRADES_TIER_3.push("AtriTrap")
+		Class.Aflank.UPGRADES_TIER_3 = ["Ahexa", "autoTriAngle", "AtrapGuard", "AtriTrap", "TAflank", "SAflank", "MGAflank", "FGAflank", "DAflank", "PAflank", "TRAflank"]
