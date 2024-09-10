@@ -503,4 +503,4 @@ Class.flankGuard.UPGRADES_TIER_2.push("Aflank")
 		Class.trapGuard.UPGRADES_TIER_3.push("AtrapGuard")
 		Class.auto3.UPGRADES_TIER_3.push("Aauto3")
 		Class.triTrapper.UPGRADES_TIER_3.push("AtriTrap")
-		Class.Aflank.UPGRADES_TIER_3 = ["Ahexa", "autoTriAngle", "AtrapGuard", "AtriTrap", "TAflank", "SAflank", "MGAflank", "FGAflank", "DAflank", "PAflank", "TRAflank"]
+		Class.Aflank.UPGRADES_TIER_3 = ["Ahexa", "autoTriAngle", "Aauto3", "AtrapGuard", "AtriTrap", "TAflank", "SAflank", "MGAflank", "FGAflank", "DAflank", "PAflank", "TRAflank"]
