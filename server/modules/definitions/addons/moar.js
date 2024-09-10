@@ -425,6 +425,15 @@ Class.PAmach = makeAuto("machineGun", "P-Turreted Mach", {type: "Pturret", size:
 Class.TRAmach = makeAuto("machineGun", "TR-Turreted Mach", {type: "TRturret", size: 11})
 Class.Aspray = makeAuto("sprayer")
 Class.Aminigun = makeAuto("minigun")
+// Aflank upgrades
+Class.TAflank = makeAuto("flankGuard", "T-Turreted Flank", {type: "Tturret", size: 11})
+Class.SAflank = makeAuto("", "S-Turreted ", {type: "Sturret", size: 11})
+Class.MGAflank = makeAuto("", "Mg-Turreted ", {type: "MGturret", size: 11})
+Class.FGAflank = makeAuto("", "Fg-Turreted ", {type: "FGturret", size: 11})
+Class.DAflank = makeAuto("", "D-Turreted ", {type: "Dturret", size: 11})
+Class.PAflank = makeAuto("", "P-Turreted ", {type: "Pturret", size: 11})
+Class.TRAflank = makeAuto("", "TR-Turreted ", {type: "TRturret", size: 11})
+Class.A = makeAuto("")
 // upgrade paths
 // flanks and twins
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
@@ -468,7 +477,10 @@ Class.pounder.UPGRADES_TIER_2.push("obliterator", "dollarer")
 		Class.tripleShot.UPGRADES_TIER_3.push("bentPound")
 Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		// caltropper
-		Class.caltropper.UPGRADES_TIER_3 = ["creator", "fungus", "artist"]
+		Class.caltropper.UPGRADES_TIER_3 = ["creator", "fungus", "artist", "hexaTrapper"]
+		Class.builder.UPGRADES_TIER_3.push("creator")
+		Class.doubleTwin.UPGRADES_TIER_3.push("artist")
+		Class.tripleShot.UPGRADES_TIER_3.push("fungus")
 // autos
 //twin
 Class.twin.UPGRADES_TIER_2.push("Atwin")
