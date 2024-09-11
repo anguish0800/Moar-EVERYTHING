@@ -467,8 +467,8 @@ const t1tanks = Class.basic.UPGRADES_TIER_1 /*[
 ]*/
 console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) {
-  	Class.A = makeAuto(t1tanks)
-  	t1tanks.UPGRADES_TIER_2 = [Class.A]
+  	Class["A" + t1tanks[i]] = makeAuto(t1tanks)
+  	Class[t1tanks[i]].UPGRADES = ["A" + t1tanks[i]]
 }
 // upgrade paths
 // flanks and twins
