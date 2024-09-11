@@ -455,20 +455,20 @@ const shtuff = [
   	{ name: "P", turretType: "Pturret" },
   	{ name: "Tr", turretType: "TRturret" }
 ]
-const t1tanks = [
+const t1tanks = Class.basic.UPGRADES_TIER_1 /*[
   	"twin",
   	"sniper",
   	"machineGun",
   	"flankGuard",
-  	""
-]
-console.log(Class.basic.UPGRADES_TIER_1)
-for (let i = 0; i < 8; i++) {
-  	let classes = Class.basic.UPGRADES_TIER_1
-    let classes2 = Class.basic.UPGRADES_TIER_1
-  	Class["A" + i] = makeAuto(classes)
-  	classes2.push("A" + i)
-  	
+  	"director",
+  	"pounder",
+  	"trapper",
+  	"desmos" // btw you can add your own t1 tanks here
+]*/
+console.log(t1tanks)
+for (let i = 0; i < t1tanks.length; i++) {
+  	Class["A" + i] = makeAuto(t1tanks)
+  	t1tanks.UPGRADES_TIER_2.push("A" + i)
 }
 // upgrade paths
 // flanks and twins
