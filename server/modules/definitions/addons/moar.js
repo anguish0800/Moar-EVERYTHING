@@ -455,7 +455,7 @@ const shtuff = [
   	{ name: "P", turretType: "Pturret" },
   	{ name: "Tr", turretType: "TRturret" }
 ]
-const t1tanks = Class.basic.UPGRADES_TIER_1 /*[
+const t1tanks = [
   	"twin",
   	"sniper",
   	"machineGun",
@@ -464,7 +464,7 @@ const t1tanks = Class.basic.UPGRADES_TIER_1 /*[
   	"pounder",
   	"trapper",
   	"desmos" // btw you can add your own t1 tanks here
-]*/
+]
 console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) {
   	Class["A" + t1tanks[i]] = makeAuto(t1tanks)
