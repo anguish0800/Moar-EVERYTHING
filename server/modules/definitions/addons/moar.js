@@ -474,7 +474,7 @@ for (let i = 0; i < t1tanks.length; i++) { // diff Turreted t1 tanks and handmad
   	for (let j = 0; j < shtuff.length; j++) {
       	Class["A2" + t1tanks[i]] = makeAuto(Class[t1tanks[i]], shtuff.name + "-Turreted " + t1tanks[i], {type: shtuff.turretType, size: 11})
     }
-  	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = ["A2", + t1tanks[i]]
+  	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = ["A2" + t1tanks[i]]
 }
 // upgrade paths
 // flanks and twins
