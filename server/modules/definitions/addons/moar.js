@@ -153,6 +153,7 @@ const makeBuildGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
+
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
