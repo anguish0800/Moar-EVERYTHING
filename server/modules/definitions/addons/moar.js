@@ -472,10 +472,9 @@ for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
 }
 for (let i = 0; i < t1tanks.length; i++) { // diff Turreted t1 tanks and handmade auto t2 tanks
   	for (let j = 0; j < shtuff.length; j++) {
-      	Class["A2" + t1tanks[i]] = makeAuto(Class[t1tanks[i]], shtuff[j].name + "-Turreted " + t1tanks[i], {type: shtuff[j].turretType, size: 11})
-      	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = []
-      	Class["A" + t1tanks[i]].UPGRADES_TIER_3.push( + t1tanks[i])
+      	Class["A2" + t1tanks[i]] = makeAuto(Class[t1tanks[i]], shtuff.name + "-Turreted " + t1tanks[i], {type: shtuff.turretType, size: 11})
     }
+  	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = []
 }
 // upgrade paths
 // flanks and twins
