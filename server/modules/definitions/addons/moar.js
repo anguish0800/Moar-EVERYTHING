@@ -153,7 +153,6 @@ const makeBuildGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
-
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -467,9 +466,14 @@ const t1tanks = Class.basic.UPGRADES_TIER_1/*[
   	"desmos" // btw you can add your own t1 tanks here
 ]*/
 console.log(t1tanks)
-for (let i = 0; i < t1tanks.length; i++) {
+for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
+}
+for (let i = 0; i < t1tanks.length; i++) { // diff Turreted t1 tanks and handmade auto t2 tanks
+  	for (let j = 0; j < shtuff.length; j++) {
+      	Class[shtuff[j].name + t1tanks[i]] = makeAuto(Class[t1tanks[i]], )
+    }
 }
 // upgrade paths
 // flanks and twins
