@@ -446,14 +446,23 @@ Class.DAdir = makeAuto("director", "D-Turreted Director", {type: "Dturret", size
 Class.PAdir = makeAuto("director", "P-Turreted Director", {type: "Pturret", size: 11})
 Class.TRAdir = makeAuto("director", "Tr-Turreted Director", {type: "TRturret", size: 11})
 Class.Aunder = makeAuto("underseer")*/ 
-const shtuff = [
-  	{ name: "T", turretType: "Tturret" },
-  	{ name: "S", turretType: "Sturret" },
-  	{ name: "Mg", turretType: "MGturret" },
-  	{ name: "Fg", turretType: "FGturret" },
-  	{ name: "D", turretType: "Dturret" },
-  	{ name: "P", turretType: "Pturret" },
-  	{ name: "Tr", turretType: "TRturret" }
+const name = [
+  	"T",
+  	"S",
+  	"Mg",
+  	"Fg",
+  	"D",
+  	"P",
+  	"Tr"
+]
+const turtype = [
+  	"Tturret",
+  	"Sturret",
+  	"MGturret",
+  	"FGturret",
+  	"Dturret",
+  	"Pturret",
+  	"TRturret"
 ]
 const t1tanks = Class.basic.UPGRADES_TIER_1/*[
   	"twin",
@@ -471,10 +480,12 @@ for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
 }
 for (let i = 0; i < t1tanks.length; i++) { // diff Turreted t1 tanks and handmade auto t2 tanks
-  	for (let j = 0; j < shtuff.length; j++) {
-      	Class["A2" + t1tanks[i]] = makeAuto(Class[t1tanks[i]], shtuff.name + "-Turreted " + t1tanks[i], {type: shtuff.turretType, size: 11})
+  	for (let j = 0; j < name.length; j++) {
+      	for (let k = 0; k < turtype.length; k++) {
+      			Class["A2" + t1tanks[i]] = makeAuto(Class[t1tanks[i]], name[j] + "-Turreted " + t1tanks[i], {type: turtype[k], size: 11})
+  					Class["A" + t1tanks[i]].UPGRADES_TIER_3 = ["A2" + t1tanks[i]]
+        }
     }
-  	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = ["A2" + t1tanks[i]]
 }
 // upgrade paths
 // flanks and twins
