@@ -483,7 +483,8 @@ for (let i = 0; i < t1tanks.length; i++) { // diff Turreted t1 tanks and handmad
   	for (let j = 0; j < name.length; j++) {
       	for (let k = 0; k < turtype.length; k++) {
       			Class[turtype[k] + name[j] + t1tanks[i]] = makeAuto(Class[t1tanks[i]], name[j] + "-Turreted " + t1tanks[i], {type: turtype[k], size: 11})
-  					Class["A" + t1tanks[i]].UPGRADES_TIER_3 = [turtype[k] + name[j] + t1tanks[i]]
+          	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = []
+  					Class["A" + t1tanks[i]].UPGRADES_TIER_3.push(turtype[k] + name[j] + t1tanks[i])
         }
     }
 }
