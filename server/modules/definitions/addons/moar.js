@@ -453,7 +453,7 @@ const name = [
   	"Fg",
   	"D",
   	"P",
-  	"Tr"
+  	/*"Tr"*/
 ]
 const turtype = [
   	"Tturret",
@@ -462,7 +462,7 @@ const turtype = [
   	"FGturret",
   	"Dturret",
   	"Pturret",
-  	"TRturret"
+  	/*"TRturret"*/
 ]
 const t1tanks = Class.basic.UPGRADES_TIER_1/*[
   	"twin",
@@ -482,8 +482,8 @@ for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
 for (let i = 0; i < t1tanks.length; i++) { // diff Turreted t1 tanks and handmade auto t2 tanks
   	for (let j = 0; j < name.length; j++) {
       	for (let k = 0; k < turtype.length; k++) {
-      			Class["A2" + t1tanks[i]] = makeAuto(Class[t1tanks[i]], name[j] + "-Turreted " + t1tanks[i], {type: turtype[k], size: 11})
-  					Class["A" + t1tanks[i]].UPGRADES_TIER_3 = ["A2" + t1tanks[i]]
+      			Class[turtype[k] + name[j] + t1tanks[i]] = makeAuto(Class[t1tanks[i]], name[j] + "-Turreted " + t1tanks[i], {type: turtype[k], size: 11})
+  					Class["A" + t1tanks[i]].UPGRADES_TIER_3 = [turtype[k] + name[j] + t1tanks[i]]
         }
     }
 }
