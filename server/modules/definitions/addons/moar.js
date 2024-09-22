@@ -447,13 +447,13 @@ Class.PAdir = makeAuto("director", "P-Turreted Director", {type: "Pturret", size
 Class.TRAdir = makeAuto("director", "Tr-Turreted Director", {type: "TRturret", size: 11})
 Class.Aunder = makeAuto("underseer")*/ 
 const name = [
-  	"T",
-  	"S",
-  	"Mg",
-  	"Fg",
-  	"D",
-  	"P",
-  	"Tr"
+  	"T-",
+  	"S-",
+  	"Mg-",
+  	"Fg-",
+  	"D-",
+  	"P-",
+  	"Tr-"
 ]
 const turtype = [
   	"Tturret",
@@ -478,15 +478,14 @@ console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
-}
-for (let i = 0; i < t1tanks.length; i++) { // diff Turreted t1 tanks and handmade auto t2 tanks
-  	for (let j = 0; j < name.length; j++) {
-      	for (let k = 0; k < turtype.length; k++) {
-      			Class[turtype[k] + name[j] + t1tanks[i]] = makeAuto(Class[t1tanks[i]], name[j] + "-Turreted " + t1tanks[i], {type: turtype[k], size: 11})
-          	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = []
-  					Class["A" + t1tanks[i]].UPGRADES_TIER_3.push(turtype[k] + name[j] + t1tanks[i])
-        }
-    }
+  	Class["A" + turtype[0] + t1tanks[i]] = makeAuto(t1tanks[i], name[0], {type: turtype[0], size: 11})
+  	Class["A" + turtype[1] + t1tanks[i]] = makeAuto(t1tanks[i], name[1], {type: turtype[1], size: 11})
+  	Class[ + turtype[2] + t1tanks[i]] = makeAuto(t1tanks[i], name[2], {type: turtype[2], size: 11})
+  	Class[name[3] + turtype[3] + t1tanks[i]] = makeAuto(t1tanks[i], name[3], {type: turtype[3], size: 11})
+  	Class[name[4] + turtype[4] + t1tanks[i]] = makeAuto(t1tanks[i], name[4], {type: turtype[4], size: 11})
+  	Class[name[5] + turtype[5] + t1tanks[i]] = makeAuto(t1tanks[i], name[5], {type: turtype[5], size: 11})
+  	Class[name[6] + turtype[6] + t1tanks[i]] = makeAuto(t1tanks[i], name[6], {type: turtype[6], size: 11})
+  	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = [name[0] + turtype[0], name[1] + turtype[1], name[2] + turtype[2], name[3] + turtype[3], name[4] + turtype[4], name[5] + turtype[5], name[6] + turtype[6]]
 }
 // upgrade paths
 // flanks and twins
