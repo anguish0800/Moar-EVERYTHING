@@ -409,7 +409,7 @@ Class.AtriTrap = makeAuto("triTrapper")
 Class.Aunder = makeAuto("underseer")
 Class.Alaunch = makeAuto("launcher")
 Class.Aartillery = makeAuto("artillery")
-Class.
+Class.Ahelix = makeAuto("helix")
 const name = [
   	"T-",
   	"S-",
@@ -442,6 +442,12 @@ console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
+  	Class["A" + t1tanks[0]].UPGRADES_TIER_3.push("Atrishot", "autoDouble", "Ahexa", "autoGunner")
+  	Class["A" + t1tanks[1]].UPGRADES_TIER_3.push("Atrishot")
+  	Class["A" + t1tanks[2]].UPGRADES_TIER_3.push("Atrishot")
+  	Class["A" + t1tanks[3]].UPGRADES_TIER_3.push("Atrishot")
+  	Class["A" + t1tanks[4]].UPGRADES_TIER_3.push("Atrishot")
+  	Class["A" + t1tanks[5]].UPGRADES_TIER_3.push("Atrishot")
   	Class["A" + turtype[0] + t1tanks[i]] = makeAuto(t1tanks[i], name[0] + "Turreted " + t1tanks[i], {type: turtype[0], size: 11})
   	Class["A" + turtype[1] + t1tanks[i]] = makeAuto(t1tanks[i], name[1] + "Turreted " + t1tanks[i], {type: turtype[1], size: 11})
   	Class["A" + turtype[2] + t1tanks[i]] = makeAuto(t1tanks[i], name[2] + "Turreted " + t1tanks[i], {type: turtype[2], size: 11})
@@ -498,27 +504,3 @@ Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		Class.builder.UPGRADES_TIER_3.push("creator")
 		Class.doubleTwin.UPGRADES_TIER_3.push("artist")
 		Class.tripleShot.UPGRADES_TIER_3.push("fungus")
-// autos
-//twin
-/*Class.twin.UPGRADES_TIER_2.push("Atwin")
-		Class.tripleShot.UPGRADES_TIER_3.push("AtriShot")
-		Class.Atwin.UPGRADES_TIER_3 = ["AtriShot", "autoDouble", "TAtwin", "SAtwin", "MGAtwin", "FGAtwin", "DAtwin", "PAtwin", "TRAtwin"]
-//sniper
-Class.sniper.UPGRADES_TIER_2.push("Asnipe")
-		Class.Asnipe.UPGRADES_TIER_2 = ["autoAssassin", "Ahunt", "Arifle", "Aminigun", "Amarks", "TAsnipe", "SAsnipe", "MGAsnipe", "FGAsnipe", "DAsnipe", "PAsnipe", "TRAsnipe"]
-//machine gun
-Class.machineGun.UPGRADES_TIER_2.push("Amachine")
-		Class.sprayer.UPGRADES_TIER_3.push("Aspray")
-		Class.minigun.UPGRADES_TIER_3.push("Aminigun")
-		Class.Amachine.UPGRADES_TIER_3 = ["Aminigun", "autoGunner", "Aspray", "TAmach", "SAmach", "MGAmach", "FGAmach", "DAmach", "PAmach", "TRAmach"]
-//flank guard
-Class.flankGuard.UPGRADES_TIER_2.push("Aflank")
-		Class.hexaTank.UPGRADES_TIER_3.push("Ahexa")
-		Class.trapGuard.UPGRADES_TIER_3.push("AtrapGuard")
-		Class.auto3.UPGRADES_TIER_3.push("Aauto3")
-		Class.triTrapper.UPGRADES_TIER_3.push("AtriTrap")
-		Class.Aflank.UPGRADES_TIER_3 = ["Ahexa", "autoTriAngle", "Aauto3", "AtrapGuard", "AtriTrap", "TAflank", "SAflank", "MGAflank", "FGAflank", "DAflank", "PAflank", "TRAflank"]
-//director
-Class.director.UPGRADES_TIER_2.push("Adirect")
-		Class.underseer.UPGRADES_TIER_3.push("Aunder")
-		Class.Adirect.UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "Aunder", "autoSpawner", "TAdir", "SAdir", "MGAdir", "FGAdir", "DAdir", "PAdir", "TRAdir"]*/
