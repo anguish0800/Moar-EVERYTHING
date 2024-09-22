@@ -453,7 +453,7 @@ const name = [
   	"Fg",
   	"D",
   	"P",
-  	/*"Tr"*/
+  	"Tr"
 ]
 const turtype = [
   	"Tturret",
@@ -462,7 +462,7 @@ const turtype = [
   	"FGturret",
   	"Dturret",
   	"Pturret",
-  	/*"TRturret"*/
+  	"TRturret"
 ]
 const t1tanks = Class.basic.UPGRADES_TIER_1/*[
   	"twin",
