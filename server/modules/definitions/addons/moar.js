@@ -478,13 +478,13 @@ console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
-  	Class["A" + turtype[0]] = makeAuto(t1tanks[i], name[0], {type: turtype[0], size: 11})
-  	Class["A" + turtype[1]] = makeAuto(t1tanks[i], name[1], {type: turtype[1], size: 11})
-  	Class["A" + turtype[2]] = makeAuto(t1tanks[i], name[2], {type: turtype[2], size: 11})
-  	Class["A" + turtype[3]] = makeAuto(t1tanks[i], name[3], {type: turtype[3], size: 11})
-  	Class["A" + turtype[4]] = makeAuto(t1tanks[i], name[4], {type: turtype[4], size: 11})
-  	Class["A" + turtype[5]] = makeAuto(t1tanks[i], name[5], {type: turtype[5], size: 11})
-  	Class["A" + turtype[6]] = makeAuto(t1tanks[i], name[6], {type: turtype[6], size: 11})
+  	Class["A" + turtype[0] + t1tanks[i]] = makeAuto(t1tanks[i], name[0], {type: turtype[0], size: 11})
+  	Class["A" + turtype[1] + t1tanks[i]] = makeAuto(t1tanks[i], name[1], {type: turtype[1], size: 11})
+  	Class["A" + turtype[2] + t1tanks[i]] = makeAuto(t1tanks[i], name[2], {type: turtype[2], size: 11})
+  	Class["A" + turtype[3] + t1tanks[i]] = makeAuto(t1tanks[i], name[3], {type: turtype[3], size: 11})
+  	Class["A" + turtype[4] + t1tanks[i]] = makeAuto(t1tanks[i], name[4], {type: turtype[4], size: 11})
+  	Class["A" + turtype[5] + t1tanks[i]] = makeAuto(t1tanks[i], name[5], {type: turtype[5], size: 11})
+  	Class["A" + turtype[6] + t] = makeAuto(t1tanks[i], name[6], {type: turtype[6], size: 11})
   	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = [("A" + turtype[0]), ("A" + turtype[1]), ("A" + turtype[2]), ("A" + turtype[3]), ("A" + turtype[4]), ("A" + turtype[5]), ("A" + turtype[6])]
 }
 // upgrade paths
