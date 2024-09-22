@@ -442,12 +442,9 @@ console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
-  	Class["A" + t1tanks[0]].UPGRADES_TIER_3.push("Atrishot", "autoDouble", "Ahexa", "autoGunner")
-  	Class["A" + t1tanks[1]].UPGRADES_TIER_3.push("Atrishot")
-  	Class["A" + t1tanks[2]].UPGRADES_TIER_3.push("Atrishot")
-  	Class["A" + t1tanks[3]].UPGRADES_TIER_3.push("Atrishot")
-  	Class["A" + t1tanks[4]].UPGRADES_TIER_3.push("Atrishot")
-  	Class["A" + t1tanks[5]].UPGRADES_TIER_3.push("Atrishot")
+  	Class["A" + t1tanks[0]].UPGRADES_TIER_3 = ["Atrishot", "autoDouble", "Ahexa", "autoGunner"]
+  	/*Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Arifle", "Amarks"]*/
+  	/*Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun"]*/
   	Class["A" + turtype[0] + t1tanks[i]] = makeAuto(t1tanks[i], name[0] + "Turreted " + t1tanks[i], {type: turtype[0], size: 11})
   	Class["A" + turtype[1] + t1tanks[i]] = makeAuto(t1tanks[i], name[1] + "Turreted " + t1tanks[i], {type: turtype[1], size: 11})
   	Class["A" + turtype[2] + t1tanks[i]] = makeAuto(t1tanks[i], name[2] + "Turreted " + t1tanks[i], {type: turtype[2], size: 11})
