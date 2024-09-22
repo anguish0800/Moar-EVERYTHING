@@ -442,9 +442,12 @@ console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
-  	Class["A" + t1tanks[0]].UPGRADES_TIER_3 = ["autoDouble", "AtriShot", "autoGunner", "autoGunner"]
-  	/*Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Arifle", "Amarks"]
-  	Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun"]*/
+}
+for (let i = 0; i < t1tanks.length; i++) {
+  	Class["A" + t1tanks[0]].UPGRADES_TIER_3 = ["autoDouble", "AtriShot", "autoGunner", "Ahexa"]
+  	Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Aminigun", "Arifle", "Amarks"]
+  	Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun"]
+  	Class["A" + t1tanks[3]].UPGRADES_TIER_3 = ["Ahexa", "Aauto3", "AtrapGuard", "AtriTrap"]
   	Class["A" + turtype[0] + t1tanks[i]] = makeAuto(t1tanks[i], name[0] + "Turreted " + t1tanks[i], {type: turtype[0], size: 11})
   	Class["A" + turtype[1] + t1tanks[i]] = makeAuto(t1tanks[i], name[1] + "Turreted " + t1tanks[i], {type: turtype[1], size: 11})
   	Class["A" + turtype[2] + t1tanks[i]] = makeAuto(t1tanks[i], name[2] + "Turreted " + t1tanks[i], {type: turtype[2], size: 11})
@@ -453,7 +456,6 @@ for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + turtype[5] + t1tanks[i]] = makeAuto(t1tanks[i], name[5] + "Turreted " + t1tanks[i], {type: turtype[5], size: 11})
   	Class["A" + turtype[6] + t1tanks[i]] = makeAuto(t1tanks[i], name[6] + "Turreted " + t1tanks[i], {type: turtype[6], size: 11})
   	Class["A" + t1tanks[i]].UPGRADES_TIER_3 = ["A" + turtype[0] + t1tanks[i], "A" + turtype[1] + t1tanks[i], "A" + turtype[2] + t1tanks[i], "A" + turtype[3] + t1tanks[i], "A" + turtype[4] + t1tanks[i], "A" + turtype[5] + t1tanks[i], "A" + turtype[6] + t1tanks[i]]
-  	console.log(Class["A" + t1tanks[1]])
 }
 // upgrade paths
 // flanks and twins
