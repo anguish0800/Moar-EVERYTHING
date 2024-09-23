@@ -410,6 +410,7 @@ Class.Aunder = makeAuto("underseer")
 Class.Alaunch = makeAuto("launcher")
 Class.Aartillery = makeAuto("artillery")
 Class.Ahelix = makeAuto("helix")
+Class.Arepeat = makeAuto("repeater")
 const name = [
   	"T-",
   	"S-",
@@ -448,6 +449,7 @@ for (let i = 0; i < t1tanks.length; i++) {
   	Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Aminigun", "Arifle", "Amarks"]
   	Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun"]
   	Class["A" + t1tanks[3]].UPGRADES_TIER_3 = ["Ahexa", "Aauto3", "AtrapGuard", "AtriTrap"]
+    Class["A" + t1tanks[4]].UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "Aunder"]
   	Class["A" + turtype[0] + t1tanks[i]] = makeAuto(t1tanks[i], name[0] + "Turreted " + t1tanks[i], {type: turtype[0], size: 11})
   	Class["A" + turtype[1] + t1tanks[i]] = makeAuto(t1tanks[i], name[1] + "Turreted " + t1tanks[i], {type: turtype[1], size: 11})
   	Class["A" + turtype[2] + t1tanks[i]] = makeAuto(t1tanks[i], name[2] + "Turreted " + t1tanks[i], {type: turtype[2], size: 11})
