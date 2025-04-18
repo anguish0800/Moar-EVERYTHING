@@ -413,7 +413,7 @@ Class.Aartillery = makeAuto("artillery")
 Class.Ahelix = makeAuto("helix")
 Class.Arepeat = makeAuto("repeater")
 const name = [
-  	"T-",
+  	"Tw-",
   	"S-",
   	"Mg-",
   	"Fg-",
