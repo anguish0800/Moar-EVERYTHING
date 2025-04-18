@@ -396,20 +396,27 @@ Class.Apound = makeAuto("pounder")
 Class.Atrap = makeAuto("trapper")
 Class.Adesmos = makeAuto("desmos")
 // auto t2
+// twin uogrades
 Class.AtriShot = makeAuto("tripleShot")
+// sniper upgrades
 Class.Ahunt = makeAuto("hunter")
 Class.Arifle = makeAuto("rifle")
 Class.Amarks = makeAuto("marksman")
+// machine gun upgrades
 Class.Aspray = makeAuto("sprayer")
 Class.Aminigun = makeAuto("minigun")
+// flank guard upgrades
 Class.Ahexa = makeAuto("hexaTank")
 Class.Aauto3 = makeAuto("auto3")
 Class.AtrapGuard = makeAuto("trapGuard")
 Class.AtriTrap = makeAuto("triTrapper")
+// director upgrades
 Class.Aunder = makeAuto("underseer")
+// pounder upgrades
 Class.Adest = makeAuto("destroyer")
 Class.Alaunch = makeAuto("launcher")
 Class.Aartillery = makeAuto("artillery")
+// desmos upgrades
 Class.Ahelix = makeAuto("helix")
 Class.Arepeat = makeAuto("repeater")
 const name = [
