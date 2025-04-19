@@ -470,7 +470,14 @@ for (let i = 0; i < t1tanks.length; i++) {
   	Class["A" + turtype[5] + t1tanks[i]] = makeAuto(t1tanks[i], name[5] + "Turreted " + t1tanks[i], {type: turtype[5], size: 11})
   	Class["A" + turtype[6] + t1tanks[i]] = makeAuto(t1tanks[i], name[6] + "Turreted " + t1tanks[i], {type: turtype[6], size: 11})
   	Class["A" + t1tanks[0]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[0], "A" + turtype[1] + t1tanks[0], "A" + turtype[2] + t1tanks[0], "A" + turtype[3] + t1tanks[0], "A" + turtype[4] + t1tanks[0], "A" + turtype[5] + t1tanks[0], "A" + turtype[6] + t1tanks[0])
-  	
+		Class["A" + t1tanks[1]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[1], "A" + turtype[1] + t1tanks[1], "A" + turtype[2] + t1tanks[1], "A" + turtype[3] + t1tanks[1], "A" + turtype[4] + t1tanks[1], "A" + turtype[5] + t1tanks[1], "A" + turtype[6] + t1tanks[1])
+		Class["A" + t1tanks[2]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[2], "A" + turtype[1] + t1tanks[2], "A" + turtype[2] + t1tanks[2], "A" + turtype[3] + t1tanks[2], "A" + turtype[4] + t1tanks[2], "A" + turtype[5] + t1tanks[2], "A" + turtype[6] + t1tanks[2])
+		Class["A" + t1tanks[3]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[3], "A" + turtype[1] + t1tanks[3], "A" + turtype[2] + t1tanks[3], "A" + turtype[3] + t1tanks[3], "A" + turtype[4] + t1tanks[3], "A" + turtype[5] + t1tanks[3], "A" + turtype[6] + t1tanks[3])
+		Class["A" + t1tanks[4]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[4], "A" + turtype[1] + t1tanks[4], "A" + turtype[2] + t1tanks[4], "A" + turtype[3] + t1tanks[4], "A" + turtype[4] + t1tanks[4], "A" + turtype[5] + t1tanks[4], "A" + turtype[6] + t1tanks[4])
+		Class["A" + t1tanks[5]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[5], "A" + turtype[1] + t1tanks[5], "A" + turtype[2] + t1tanks[5], "A" + turtype[3] + t1tanks[5], "A" + turtype[4] + t1tanks[5], "A" + turtype[5] + t1tanks[5], "A" + turtype[6] + t1tanks[5])
+		Class["A" + t1tanks[6]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[6], "A" + turtype[1] + t1tanks[6], "A" + turtype[2] + t1tanks[6], "A" + turtype[3] + t1tanks[6], "A" + turtype[4] + t1tanks[6], "A" + turtype[5] + t1tanks[6], "A" + turtype[6] + t1tanks[6])
+		Class["A" + t1tanks[7]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[7], "A" + turtype[1] + t1tanks[7], "A" + turtype[2] + t1tanks[7], "A" + turtype[3] + t1tanks[7], "A" + turtype[4] + t1tanks[7], "A" + turtype[5] + t1tanks[7], "A" + turtype[6] + t1tanks[7])
+  
 }
 // upgrade paths
 // flanks and twins
