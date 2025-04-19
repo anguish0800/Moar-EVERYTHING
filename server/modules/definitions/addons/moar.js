@@ -458,7 +458,7 @@ for (let i = 0; i < t1tanks.length; i++) {
   	Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Aminigun", "Arifle", "Amarks"]
   	Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun"]
   	Class["A" + t1tanks[3]].UPGRADES_TIER_3 = ["Ahexa", "Aauto3", "AtrapGuard", "AtriTrap"]
-    Class["A" + t1tanks[4]].UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "Aunder"]
+    Class["A" + t1tanks[4]].UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "autoSpawner", "Aunder"]
   	Class["A" + t1tanks[5]].UPGRADES_TIER_3 = ["Adest", "autoBuilder", "Aartillery", "Alaunch"]
   	Class["A" + t1tanks[6]].UPGRADES_TIER_3 = ["autoBuilder", "AtriTrap", "AtrapGuard"]
   	Class["A" + t1tanks[7]].UPGRADES_TIER_3 = ["Ahelix", "Arepeat"]
@@ -469,11 +469,8 @@ for (let i = 0; i < t1tanks.length; i++) {
   	Class["A" + turtype[4] + t1tanks[i]] = makeAuto(t1tanks[i], name[4] + "Turreted " + t1tanks[i], {type: turtype[4], size: 11})
   	Class["A" + turtype[5] + t1tanks[i]] = makeAuto(t1tanks[i], name[5] + "Turreted " + t1tanks[i], {type: turtype[5], size: 11})
   	Class["A" + turtype[6] + t1tanks[i]] = makeAuto(t1tanks[i], name[6] + "Turreted " + t1tanks[i], {type: turtype[6], size: 11})
-  	if (Class["A" + t1tanks[i]].UPGRADES_TIER_3 == null) {
-  			Class["A" + t1tanks[i]].UPGRADES_TIER_3 = ["A" + turtype[0] + t1tanks[i], "A" + turtype[1] + t1tanks[i], "A" + turtype[2] + t1tanks[i], "A" + turtype[3] + t1tanks[i], "A" + turtype[4] + t1tanks[i], "A" + turtype[5] + t1tanks[i], "A" + turtype[6] + t1tanks[i]]
-    } else {
-      	Class["A" + t1tanks[i]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[i], "A" + turtype[1] + t1tanks[i], "A" + turtype[2] + t1tanks[i], "A" + turtype[3] + t1tanks[i], "A" + turtype[4] + t1tanks[i], "A" + turtype[5] + t1tanks[i], "A" + turtype[6] + t1tanks[i])
-    }
+  	Class["A" + t1tanks[0]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[0], "A" + turtype[1] + t1tanks[0], "A" + turtype[2] + t1tanks[0], "A" + turtype[3] + t1tanks[0], "A" + turtype[4] + t1tanks[0], "A" + turtype[5] + t1tanks[0], "A" + turtype[6] + t1tanks[0])
+  	
 }
 // upgrade paths
 // flanks and twins
