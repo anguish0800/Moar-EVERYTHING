@@ -184,9 +184,9 @@ Class.owl = { // tank itself
       	makeSnipeGun({ y: -t, delay: 0.5 })
     ]
 }
-Class.machinist = {
+Class.machsnist = {
   	PARENT: "machineGun",
-  	LABEL: "Machinist",
+  	LABEL: "Machanist",
   	GUNS: [
       	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8}),
       	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
@@ -349,9 +349,9 @@ Class.faucile = {
 }
 Class.extinguisher = makeMulti("dollarer", 2, "Extinguisher")
 // caltropper upgrades
-Class.fungus = {
+Class.bentTrap = {
   	PARENT: "trapper",
-  	LABEL: "Fungus",
+  	LABEL: "Bent-Trap",
   	GUNS: [
       	makeTrapGun2({ x: -2, y: -2, angle: -17 }),
       	makeTrapGun2({ x: -2, y: 2, angle: 17 }),
@@ -481,6 +481,7 @@ for (let i = 0; i < t1tanks.length; i++) {
 }
 // upgrade paths
 // flanks and twins
+Class.twin.UPGRADES_TIER_2.push("owl", "machanist", "dollarer", "caltropper")
 Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		// degrader
 		Class.degrader.UPGRADES_TIER_3 = ["rustage", "prey", "machShot", "assault", "husk", "breaker"]
@@ -494,14 +495,14 @@ Class.sniper.UPGRADES_TIER_2.push("degrader", "owl")
 		Class.marksman.UPGRADES_TIER_3.push("canary")
 		Class.doubleTwin.UPGRADES_TIER_3.push("crow")
 		Class.tripleShot.UPGRADES_TIER_3.push("bentSnipe")
-Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machinist")
+Class.machineGun.UPGRADES_TIER_2.push("sabotager", "machanist")
 		// sabotager
 		Class.sabotager.UPGRADES_TIER_3 = ["foctar", "machShot", "vase", "ultimatum", "shower"]
 		Class.gunner.UPGRADES_TIER_3.push("vase")
 		Class.minigun.UPGRADES_TIER_3.push("machShot")
 		Class.sprayer.UPGRADES_TIER_3.push("ultimatum")
 		// machinist 
-		Class.machinist.UPGRADES_TIER_3 = ["faucile", "megagun", "catastrophe", "splasher", "bentMach", "dyadic", "shower"]
+		Class.machanist.UPGRADES_TIER_3 = ["faucile", "megagun", "catastrophe", "splasher", "bentMach", "dyadic", "shower"]
 		Class.minigun.UPGRADES_TIER_3.push("megagun")
     Class.gunner.UPGRADES_TIER_3.push("catastrophe")
     Class.sprayer.UPGRADES_TIER_3.push("splasher")
@@ -525,4 +526,4 @@ Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		Class.caltropper.UPGRADES_TIER_3 = ["creator", "fungus", "artist", "hexaTrapper", "bulwark"]
 		Class.builder.UPGRADES_TIER_3.push("creator")
 		Class.doubleTwin.UPGRADES_TIER_3.push("artist")
-		Class.tripleShot.UPGRADES_TIER_3.push("fungus")
+		Class.tripleShot.UPGRADES_TIER_3.push("bentTrap")
