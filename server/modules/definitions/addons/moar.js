@@ -2,11 +2,11 @@ const { combineStats, makeAuto, makeTurret, makeOver, makeDeco, makeGuard, makeB
 const { base, statnames, gunCalcNames, dfltskl, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 // references
-const makeSnipeGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeSnipeGun = ({ x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
     return {
         POSITION: [24, 8.5, 1, x, y, angle, delay],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.sniper]),
+            SHOOT_SETTINGS: combineStats([g.basic, g.sniper, stats]),
             TYPE: "bullet",
         }
     }
@@ -234,7 +234,7 @@ Class.bentSnipe = {
   	GUNS: [
       	makeSnipeGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
       	makeSnipeGun({ x: -2, y: 2, angle: 17, delay: 0.5}),
-      	makeSnipeGun({})
+      	makeSnipeGun({ stats: {reload: 0.01}})
     ]
 }
 Class.canary = {
