@@ -451,12 +451,15 @@ for (let i = 0; i < t1tanks.length; i++) {
     t2tanks.push(Class[t1tanks[i]].UPGRADES_TIER_2)
 }
 let t2tanksflat = t2tanks.flat()
-let t2tanksfiltered = [...new Set(t2tanksflat)]
-console.log(t2tanksfiltered)
+let t2tanksnodupe = [...new Set(t2tanksflat)]
+console.log(t2tanksnodupe)
 console.log(t1tanks)
-for (let i = 0; i < t2tanksfiltered.length; i++) {
-  	if (Class[t2tanksfiltered[i]].UPGRADES_TIER_3)
+for (let i = t2tanksnodupe.length - 1; i >= 0; i--) {
+  	if (Class[t2tanksnodupe[i]].UPGRADES_TIER_3.includes("auto")) {
+      	t2tanksnodupe.splice(i, 1)
+    }
 }
+console.log(t2tanksnodupe)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
