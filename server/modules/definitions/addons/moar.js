@@ -450,15 +450,20 @@ const t1tanks = Class.basic.UPGRADES_TIER_1
 for (let i = 0; i < t1tanks.length; i++) {
     t2tanks.push(Class[t1tanks[i]].UPGRADES_TIER_2)
 }
-console.log(t2tanks)
+let t2tanksflat = t2tanks.flat()
+let t2tanksfiltered = [...new Set(t2tanksflat)]
+console.log(t2tanksfiltered)
 console.log(t1tanks)
+for (let i = 0; i < t2tanksfiltered.length; i++) {
+  	if (Class[t2tanksfiltered[i]].UPGRADES_TIER_3)
+}
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
 }
 for (let i = 0; i < t1tanks.length; i++) {
   	Class["A" + t1tanks[0]].UPGRADES_TIER_3 = ["autoDouble", "AtriShot", "autoGunner", "Ahexa", "Aowl", "Amachinist", "Adollar", "Acaltrop"]
-  	Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Aminigun", "Arifle", "Amarks", "Aowl", "Adegradw"]
+  	Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Aminigun", "Arifle", "Amarks", "Aowl", "Adegrade"]
   	Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun", "Amachinist", "Asabotage"]
   	Class["A" + t1tanks[3]].UPGRADES_TIER_3 = ["Ahexa", "Aauto3", "AtrapGuard", "AtriTrap", "Adegrader", "Asabotage", "Aobliterate"]
     Class["A" + t1tanks[4]].UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "autoSpawner", "Aunder"]
