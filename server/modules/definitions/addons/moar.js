@@ -365,8 +365,7 @@ Class.creator = {
   	PARENT: "builder",
   	LABEL: "Creator",
   	GUNS: [
-      	makeBuildGun({ angle: 22.5 }),
-      	makeBuildGun({ angle: -22.5 }),
+      	makeBuildGun({ angle: 0 }),
       	makeBuildGun2({ angle: 22.5 }),
       	makeBuildGun2({ angle: -22.5, delay: 0.5 })
     ]
