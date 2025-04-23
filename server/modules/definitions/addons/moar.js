@@ -452,14 +452,9 @@ for (let i = 0; i < t1tanks.length; i++) {
 }
 let t2tanksflat = t2tanks.flat()
 let t2tanksnodupe = [...new Set(t2tanksflat)]
-console.log(t2tanksnodupe)
+let t2tanksnoauto = t2tanksnodupe.filter(item => item !== "auto")
+console.log(t2tanksnoauto)
 console.log(t1tanks)
-for (let i = t2tanksnodupe.length - 1; i >= 0; i--) {
-  	if (Class[t2tanksnodupe[i]].UPGRADES_TIER_3.includes("auto")) {
-      	t2tanksnodupe.splice(i, 1)
-    }
-}
-console.log(t2tanksnodupe)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
@@ -468,7 +463,7 @@ for (let i = 0; i < t1tanks.length; i++) {
   	Class["A" + t1tanks[0]].UPGRADES_TIER_3 = ["autoDouble", "AtriShot", "autoGunner", "Ahexa", "Aowl", "Amachinist", "Adollar", "Acaltrop"]
   	Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Aminigun", "Arifle", "Amarks", "Aowl", "Adegrade"]
   	Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun", "Amachinist", "Asabotage"]
-  	Class["A" + t1tanks[3]].UPGRADES_TIER_3 = ["Ahexa", "Aauto3", "AtrapGuard", "AtriTrap", "Adegrader", "Asabotage", "Aobliterate"]
+  	Class["A" + t1tanks[3]].UPGRADES_TIER_3 = ["Ahexa", "Aauto3", "AtrapGuard", "AtriTrap", "Adegrade", "Asabotage", "Aobliterate"]
     Class["A" + t1tanks[4]].UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "autoSpawner", "Aunder"]
   	Class["A" + t1tanks[5]].UPGRADES_TIER_3 = ["Adest", "autoBuilder", "Aartillery", "Alaunch", "Adollar", "Aobliterate"]
   	Class["A" + t1tanks[6]].UPGRADES_TIER_3 = ["autoBuilder", "AtriTrap", "AtrapGuard", "Acaltrop"]
