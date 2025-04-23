@@ -365,10 +365,10 @@ Class.creator = {
   	PARENT: "builder",
   	LABEL: "Creator",
   	GUNS: [
-      	makeBuildGun({ angle: 45 }),
-      	makeBuildGun({ angle: -45 }),
-      	makeBuildGun2({ angle: 45 }),
-      	makeBuildGun2({ angle: -45, delay: 0.5 })
+      	makeBuildGun({ angle: 22.5 }),
+      	makeBuildGun({ angle: -22.5 }),
+      	makeBuildGun2({ angle: 22.5 }),
+      	makeBuildGun2({ angle: -22.5, delay: 0.5 })
     ]
 }
 Class.artist = makeMulti("caltropper", 2, "artist")
@@ -445,6 +445,7 @@ const turtype = [
   	"Pturret",
   	"TRturret"
 ]
+const t1tanks = Class.basic.UPGRADES_TIER_1
 console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
@@ -527,20 +528,3 @@ Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		Class.builder.UPGRADES_TIER_3.push("creator")
 		Class.doubleTwin.UPGRADES_TIER_3.push("artist")
 		Class.tripleShot.UPGRADES_TIER_3.push("bentTrap")
-let t2tanks = []
-
-const t1tanks = Class.basic.UPGRADES_TIER_1
-
-for (let i = 0; i < t1tanks.length; i++) {
-
-    t2tanks.push(Class[t1tanks[i]].UPGRADES_TIER_2)
-
-}
-
-let t2tanksflat = t2tanks.flat()
-
-let t2tanksnodupe = [...new Set(t2tanksflat)]
-
-let t2tanksnoauto = t2tanksnodupe.filter(item => item !== "auto")
-
-console.log(t2tanksnoauto)
