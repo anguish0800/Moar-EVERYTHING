@@ -445,16 +445,12 @@ const turtype = [
   	"Pturret",
   	"TRturret"
 ]
-const t1tanks = Class.basic.UPGRADES_TIER_1/*[
-  	"twin",
-  	"sniper",
-  	"machineGun",
-  	"flankGuard",
-  	"director",
-  	"pounder",
-  	"trapper",
-  	"desmos" // btw you can add your own t1 tanks here
-]*/
+let t2tanks = []
+const t1tanks = Class.basic.UPGRADES_TIER_1
+for (let i = 0; i < t1tanks.length; i++) {
+    t2tanks.push(Class[t1tanks[i]].UPGRADES_TIER_2)
+}
+console.log(t2tanks)
 console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
