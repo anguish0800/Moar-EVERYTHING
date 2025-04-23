@@ -445,15 +445,6 @@ const turtype = [
   	"Pturret",
   	"TRturret"
 ]
-let t2tanks = []
-const t1tanks = Class.basic.UPGRADES_TIER_1
-for (let i = 0; i < t1tanks.length; i++) {
-    t2tanks.push(Class[t1tanks[i]].UPGRADES_TIER_2)
-}
-let t2tanksflat = t2tanks.flat()
-let t2tanksnodupe = [...new Set(t2tanksflat)]
-let t2tanksnoauto = t2tanksnodupe.filter(item => item !== "auto")
-console.log(t2tanksnoauto)
 console.log(t1tanks)
 for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class["A" + t1tanks[i]] = makeAuto(Class[t1tanks[i]])
@@ -483,7 +474,6 @@ for (let i = 0; i < t1tanks.length; i++) {
 		Class["A" + t1tanks[5]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[5], "A" + turtype[1] + t1tanks[5], "A" + turtype[2] + t1tanks[5], "A" + turtype[3] + t1tanks[5], "A" + turtype[4] + t1tanks[5], "A" + turtype[5] + t1tanks[5], "A" + turtype[6] + t1tanks[5])
 		Class["A" + t1tanks[6]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[6], "A" + turtype[1] + t1tanks[6], "A" + turtype[2] + t1tanks[6], "A" + turtype[3] + t1tanks[6], "A" + turtype[4] + t1tanks[6], "A" + turtype[5] + t1tanks[6], "A" + turtype[6] + t1tanks[6])
 		Class["A" + t1tanks[7]].UPGRADES_TIER_3.push("A" + turtype[0] + t1tanks[7], "A" + turtype[1] + t1tanks[7], "A" + turtype[2] + t1tanks[7], "A" + turtype[3] + t1tanks[7], "A" + turtype[4] + t1tanks[7], "A" + turtype[5] + t1tanks[7], "A" + turtype[6] + t1tanks[7])
-  
 }
 // upgrade paths
 // flanks and twins
@@ -537,3 +527,20 @@ Class.trapper.UPGRADES_TIER_2.push("caltropper")
 		Class.builder.UPGRADES_TIER_3.push("creator")
 		Class.doubleTwin.UPGRADES_TIER_3.push("artist")
 		Class.tripleShot.UPGRADES_TIER_3.push("bentTrap")
+let t2tanks = []
+
+const t1tanks = Class.basic.UPGRADES_TIER_1
+
+for (let i = 0; i < t1tanks.length; i++) {
+
+    t2tanks.push(Class[t1tanks[i]].UPGRADES_TIER_2)
+
+}
+
+let t2tanksflat = t2tanks.flat()
+
+let t2tanksnodupe = [...new Set(t2tanksflat)]
+
+let t2tanksnoauto = t2tanksnodupe.filter(item => item !== "auto")
+
+console.log(t2tanksnoauto)
