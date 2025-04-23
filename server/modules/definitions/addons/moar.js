@@ -402,20 +402,27 @@ Class.AtriShot = makeAuto("tripleShot")
 Class.Ahunt = makeAuto("hunter")
 Class.Arifle = makeAuto("rifle")
 Class.Amarks = makeAuto("marksman")
+Class.Adegrade = makeAuto("degrader")
+Class.Aowl = makeAuto("owl")
 // machine gun upgrades
 Class.Aspray = makeAuto("sprayer")
 Class.Aminigun = makeAuto("minigun")
+Class.Asabotage = makeAuto("sabotager")
+Class.Amachinist = makeAuto("machinist")
 // flank guard upgrades
 Class.Ahexa = makeAuto("hexaTank")
 Class.Aauto3 = makeAuto("auto3")
 Class.AtrapGuard = makeAuto("trapGuard")
 Class.AtriTrap = makeAuto("triTrapper")
+Class.Acaltrop = makeAuto("caltropper")
 // director upgrades
 Class.Aunder = makeAuto("underseer")
 // pounder upgrades
 Class.Adest = makeAuto("destroyer")
 Class.Alaunch = makeAuto("launcher")
 Class.Aartillery = makeAuto("artillery")
+Class.Aobliterate = makeAuto("obliterator")
+Class.Adollar = makeAuto("dollarer")
 // desmos upgrades
 Class.Ahelix = makeAuto("helix")
 Class.Arepeat = makeAuto("repeater")
@@ -454,13 +461,13 @@ for (let i = 0; i < t1tanks.length; i++) { // auto t1 tanks
   	Class[t1tanks[i]].UPGRADES_TIER_2.push("A" + t1tanks[i])
 }
 for (let i = 0; i < t1tanks.length; i++) {
-  	Class["A" + t1tanks[0]].UPGRADES_TIER_3 = ["autoDouble", "AtriShot", "autoGunner", "Ahexa"]
-  	Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Aminigun", "Arifle", "Amarks"]
-  	Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun"]
-  	Class["A" + t1tanks[3]].UPGRADES_TIER_3 = ["Ahexa", "Aauto3", "AtrapGuard", "AtriTrap"]
+  	Class["A" + t1tanks[0]].UPGRADES_TIER_3 = ["autoDouble", "AtriShot", "autoGunner", "Ahexa", "Aowl", "Amachinist", "Adollar", "Acaltrop"]
+  	Class["A" + t1tanks[1]].UPGRADES_TIER_3 = ["autoAssassin", "Ahunt", "Aminigun", "Arifle", "Amarks", "Aowl", "Adegradw"]
+  	Class["A" + t1tanks[2]].UPGRADES_TIER_3 = ["Aartillery", "autoGunner", "Aspray", "Aminigun", "Amachinist", "Asabotage"]
+  	Class["A" + t1tanks[3]].UPGRADES_TIER_3 = ["Ahexa", "Aauto3", "AtrapGuard", "AtriTrap", "Adegrader", "Asabotage", "Aobliterate"]
     Class["A" + t1tanks[4]].UPGRADES_TIER_3 = ["autoOverseer", "autoCruiser", "autoSpawner", "Aunder"]
-  	Class["A" + t1tanks[5]].UPGRADES_TIER_3 = ["Adest", "autoBuilder", "Aartillery", "Alaunch"]
-  	Class["A" + t1tanks[6]].UPGRADES_TIER_3 = ["autoBuilder", "AtriTrap", "AtrapGuard"]
+  	Class["A" + t1tanks[5]].UPGRADES_TIER_3 = ["Adest", "autoBuilder", "Aartillery", "Alaunch", "Adollar", "Aobliterate"]
+  	Class["A" + t1tanks[6]].UPGRADES_TIER_3 = ["autoBuilder", "AtriTrap", "AtrapGuard", "Acaltrop"]
   	Class["A" + t1tanks[7]].UPGRADES_TIER_3 = ["Ahelix", "Arepeat"]
   	Class["A" + turtype[0] + t1tanks[i]] = makeAuto(t1tanks[i], name[0] + "Turreted " + t1tanks[i], {type: turtype[0], size: 11})
   	Class["A" + turtype[1] + t1tanks[i]] = makeAuto(t1tanks[i], name[1] + "Turreted " + t1tanks[i], {type: turtype[1], size: 11})
