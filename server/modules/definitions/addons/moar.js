@@ -39,9 +39,9 @@ const makeTrapGun = ({ length = 3, width = 7, aspect = 1.7, x = 0, y = 0, angle 
         }
     }
 }
-const makeTrapGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeTrapGun2 = ({ length = 15, width = 7, aspect = 1, x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [15, 7, 1, x, y, angle, delay],
+        POSITION: [length, width, aspect, x, y, angle, delay],
     }
 }
 const makeAssGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => { // to sny immature idiot: i called it assgun cause ass was a shortened version of (ass)assin
