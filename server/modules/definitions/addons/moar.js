@@ -20,7 +20,7 @@ const makeMachineGunGun = ({ length = 12, width = 10, aspect = 1.4, x = 8, y = 0
         }
     }
 }
-const makePoundGun = ({length = 20.5, width = 12, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
+const makePoundGun = ({ length = 20.5, width = 12, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
     return {
         POSITION: [length, width, aspect, x, y, angle, delay],
         PROPERTIES: {
@@ -29,11 +29,11 @@ const makePoundGun = ({length = 20.5, width = 12, aspect = 1, x = 0, y = 0, angl
         }
     }
 }
-const makeTrapGun = ({lentg x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeTrapGun = ({ length = 3, width = 7, aspect = 1.7, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
     return {
-      	POSITION: [3, 7, 1.7, x + 15, y, angle, delay],
+      	POSITION: [length, width, aspect, x + 15, y, angle, delay],
       	PROPERTIES: {
-        		SHOOT_SETTINGS: combineStats([g.trap]),
+        		SHOOT_SETTINGS: combineStats([g.trap, stats]),
           	TYPE: "trap",
           	STAT_CALCULATOR: "trap"
         }
