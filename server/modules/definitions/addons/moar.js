@@ -2,34 +2,34 @@ const { combineStats, makeAuto, makeTurret, makeOver, makeDeco, makeGuard, makeB
 const { base, statnames, gunCalcNames, dfltskl, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 // references
-const makeSnipeGun = ({ x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
+const makeSnipeGun = ({ length = 24, width = 8.5, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
     return {
-        POSITION: [24, 8.5, 1, x, y, angle, delay],
+        POSITION: [length, width, aspect, x, y, angle, delay],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.basic, g.sniper, stats]),
             TYPE: "bullet",
         }
     }
 }
-const makeMachineGunGun = ({ width = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeMachineGunGun = ({ length = 12, width = 10, aspect = 1.4, x = 8, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
     return {
-        POSITION: [12, width, 1.4, x + 8, y, angle, delay],
+        POSITION: [length, width, aspect, x, y, angle, delay],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.machineGun]),
+            SHOOT_SETTINGS: combineStats([g.basic, g.machineGun, stats]),
             TYPE: "bullet",
         }
     }
 }
-const makePoundGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makePoundGun = ({length = 20.5, width = 12, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
     return {
-        POSITION: [20.5, 12, 1, x, y, angle, delay],
+        POSITION: [length, width, aspect, x, y, angle, delay],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.pounder]),
+            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, stats]),
             TYPE: "bullet",
         }
     }
 }
-const makeTrapGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeTrapGun = ({lentg x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
       	POSITION: [3, 7, 1.7, x + 15, y, angle, delay],
       	PROPERTIES: {
@@ -67,18 +67,18 @@ const makeMarksGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         }
     }
 }
-const makeMinigunGun = ({ length = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeMinigunGun = ({ length = 21, x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [length + 21, 8, 1, x, y, angle, delay],
+        POSITION: [length, 8, 1, x, y, angle, delay],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.basic, g.minigun]),
             TYPE: "bullet",
         }
     }
 }
-const makeGunnerGun = ({ length = 0, x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeGunnerGun = ({ length = 12, x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
-        POSITION: [length + 12, 3.5, 1, x, y, angle, delay],
+        POSITION: [length, 3.5, 1, x, y, angle, delay],
         PROPERTIES: {
             SHOOT_SETTINGS: combineStats([g.basic, g.twin, g.gunner, {speed: 1.2}]),
             TYPE: "bullet",
@@ -234,7 +234,7 @@ Class.bentSnipe = {
   	GUNS: [
       	makeSnipeGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
       	makeSnipeGun({ x: -2, y: 2, angle: 17, delay: 0.5}),
-      	makeSnipeGun({ stats: {reload: 0.01}})
+      	makeSnipeGun({})
     ]
 }
 Class.canary = {
@@ -259,22 +259,22 @@ Class.megagun = {
   	GUNS: [
       	makeMinigunGun({ y: t }),
       	makeMinigunGun({ y: -t, delay: 1/6 }),
-      	makeMinigunGun({ length: -2, y: t, delay: 2/6 }),
-      	makeMinigunGun({ length: -2, y: -t, delay: 3/6 }),
-      	makeMinigunGun({ length: -4, y: t, delay: 4/6 }),
-      	makeMinigunGun({ length: -4, y: -t, delay: 5/6})
+      	makeMinigunGun({ length: 19, y: t, delay: 2/6 }),
+      	makeMinigunGun({ length: 19, y: -t, delay: 3/6 }),
+      	makeMinigunGun({ length: 17, y: t, delay: 4/6 }),
+      	makeMinigunGun({ length: 17, y: -t, delay: 5/6})
     ]
 }
 Class.catastrophe = {
   	PARENT: "gunner",
 		LABEL: "Catastrophe",
   	GUNS: [
-      	makeGunnerGun({ length: -2, y: -8, angle: -8 }),
-      	makeGunnerGun({ length: -2, y: 8, angle: 8 }),
+      	makeGunnerGun({ length: 10, y: -8, angle: -8 }),
+      	makeGunnerGun({ length: 10, y: 8, angle: 8 }),
       	makeGunnerGun({ y: 7.25, delay: 1/3 }),
       	makeGunnerGun({ y: -7.25, delay: 1/3 }),
-      	makeGunnerGun({ length: 4, y: 3.75, delay: 2/3 }),
-      	makeGunnerGun({ length: 4, y: -3.75, delay: 2/3 })
+      	makeGunnerGun({ length: 16, y: 3.75, delay: 2/3 }),
+      	makeGunnerGun({ length: 16, y: -3.75, delay: 2/3 })
     ]
 }
 Class.splasher = {
