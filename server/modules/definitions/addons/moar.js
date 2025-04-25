@@ -2,154 +2,13 @@ const { combineStats, makeAuto, makeTurret, makeOver, makeDeco, makeGuard, makeB
 const { base, statnames, gunCalcNames, dfltskl, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 // references
-const makeSnipeGun = ({ length = 24, width = 8.5, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
+const makeGun = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.basic, bulletType = "bullet", statCalc = "" }) => {
     return {
         POSITION: [length, width, aspect, x, y, angle, delay],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.sniper, stats]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makeMachineGunGun = ({ length = 12, width = 10, aspect = 1.4, x = 8, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
-    return {
-        POSITION: [length, width, aspect, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.machineGun, stats]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makePoundGun = ({ length = 20.5, width = 12, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
-    return {
-        POSITION: [length, width, aspect, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, stats]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makeTrapGun = ({ length = 3, width = 7, aspect = 1.7, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
-    return {
-      	POSITION: [length, width, aspect, x + 15, y, angle, delay],
-      	PROPERTIES: {
-        		SHOOT_SETTINGS: combineStats([g.trap, stats]),
-          	TYPE: "trap",
-          	STAT_CALCULATOR: "trap"
-        }
-    }
-}
-const cosmeticGun = ({ length = 15, width = 7, aspect = 1, x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [length, width, aspect, x, y, angle, delay],
-    }
-}
-const makeAssGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => { // to sny immature idiot: i called it assgun cause ass was a shortened version of (ass)assin
-    return {
-        POSITION: [27, 8, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.assassin]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makeMarksGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [5, 8.5, 1.3, x + 8, y, angle, delay],
-    }
-}
-const makeMarksGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [24, 8.5, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.sniper, { pen: 2 }]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makeMinigunGun = ({ length = 21, x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [length, 8, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.minigun]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makeGunnerGun = ({ length = 12, x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [length, 3.5, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.twin, g.gunner, {speed: 1.2}]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makeSprayGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [18, 7, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.machineGun, g.lowPower, g.pelleter, { recoil: 1.15}]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makeDestGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [21, 14, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.destroyer]),
-            TYPE: "bullet",
-        }
-    }
-}
-const makeLaunchGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [10, 9, 1, 9 + x, y, angle, delay]
-    }
-}
-const makeLaunchGun2 = ({ length = 17, width = 13, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
-    return {
-        POSITION: [length, width, aspect, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.launcher, stats]),
-            TYPE: "minimissile",
-          	STAT_CALCULATOR: "sustained"
-        }
-    }
-}
-const makeArtGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [19, 12, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.artillery]),
-            TYPE: "bullet",
-          	LABEL: "Heavy"
-        }
-    }
-}
-const makeArtGunSide = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [17, 3, 1, x, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.pelleter, g.artillery]),
-            TYPE: "bullet",
-          	LABEL: "Secondary"
-        }
-    }
-}
-const makeBuildGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [18, 12, 1, x, y, angle, delay],
-    }
-}
-const makeBuildGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
-    return {
-        POSITION: [2, 12, 1.1, x + 18, y, angle, delay],
-        PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.trap, g.setTrap]),
-            TYPE: "setTrap",
-          	STAT_CALCULATOR: "block"
+            SHOOT_SETTINGS: combineStats(stats),
+            TYPE: bulletType,
+          	STAT_CALCULATOR: statCalc
         }
     }
 }
@@ -180,15 +39,15 @@ Class.owl = { // tank itself
   	PARENT: "sniper",
   	LABEL: "Owl",
   	GUNS: [
-      	makeSnipeGun({ y: t }),
-      	makeSnipeGun({ y: -t, delay: 0.5 })
+      	makeGun({ length: 24, width: 8.5, y: t, stats: [g.basic, g.sniper] }),
+      	makeGun({ length: 24, width: 8.5, y: -t, delay: 0.5, stats: [g.basic, g.sniper] })
     ]
 }
 Class.machinist = {
   	PARENT: "machineGun",
   	LABEL: "Machinist",
   	GUNS: [
-      	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8}),
+      	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8 }),
       	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
     ]
 }
