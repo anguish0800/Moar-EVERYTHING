@@ -39,7 +39,7 @@ const makeTrapGun = ({ length = 3, width = 7, aspect = 1.7, x = 0, y = 0, angle 
         }
     }
 }
-const makeTrapGun2 = ({ length = 15, width = 7, aspect = 1, x = 0, y = 0, angle = 0, delay = 0 }) => {
+const cosmeticGun = ({ length = 15, width = 7, aspect = 1, x = 0, y = 0, angle = 0, delay = 0 }) => {
     return {
         POSITION: [length, width, aspect, x, y, angle, delay],
     }
@@ -108,11 +108,11 @@ const makeLaunchGun = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
         POSITION: [10, 9, 1, 9 + x, y, angle, delay]
     }
 }
-const makeLaunchGun2 = ({ x = 0, y = 0, angle = 0, delay = 0 }) => {
+const makeLaunchGun2 = ({ length = 17, width = 13, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.blank }) => {
     return {
-        POSITION: [17, 13, 1, x, y, angle, delay],
+        POSITION: [length, width, aspect, x, y, angle, delay],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.launcher]),
+            SHOOT_SETTINGS: combineStats([g.basic, g.pounder, g.launcher, stats]),
             TYPE: "minimissile",
           	STAT_CALCULATOR: "sustained"
         }
