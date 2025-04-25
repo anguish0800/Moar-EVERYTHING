@@ -12,6 +12,11 @@ const makeGun = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0, 
         }
     }
 }
+const makeCos = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0 }) => {
+  	return {
+    		POSITION: [length, width, aspect, x, y, angle, 0]
+    }
+}
 // flanks
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
@@ -47,8 +52,8 @@ Class.machinist = {
   	PARENT: "machineGun",
   	LABEL: "Machinist",
   	GUNS: [
-      	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8 }),
-      	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
+      	makeGun({ length: 12, width: 7, aspect: 1.4, y: t, x: 4, angle: 8, stats: [g.basic, g.machineGun] }),
+      	makeGun({ length: 12, width: 7, aspect: 1.4, y: -t, x: 4, angle: -8, delay: 0.5, stats: [g.basic, g.machineGun] })
     ]
 }
 Class.dollarer = {
@@ -56,20 +61,20 @@ Class.dollarer = {
   	LABEL: "Dollarer",
   	GUNS: [
       	{
-          	POSITION: [6, 25, 0, -6, 0, 0, 0]
-        },
-      	makePoundGun({ y: t + 1 }),
-      	makePoundGun({ y: -t - 1, delay: 0.5})
+      			POSITION: [10, 25, 0, -10, 0, 0, 0]
+      	},
+      	makeGun({ y: t + 1 }),
+      	makeGun({ y: -t - 1, delay: 0.5})
     ]
 }
 Class.caltropper = { // i will not call it wark, cry about it
 		PARENT: "trapper",
   	LABEL: "Caltropper",
   	GUNS: [
-      	makeTrapGun2({ y: t, angle: 8 }),
-      	makeTrapGun2({ y: -t, angle: -8 }),
-      	makeTrapGun({ y: t, angle: 8 }),
-      	makeTrapGun({ y: -t, angle: -8, delay: 0.5 })
+      	makeCos({ y: t, angle: 8 }),
+      	makeCos({ y: -t, angle: -8 }),
+      	makeGun({ y: t, angle: 8 }),
+      	makeGun({ y: -t, angle: -8, delay: 0.5 })
     ]
 }
 // owl upgrades
@@ -80,8 +85,8 @@ Class.griffin = {
       	{
           	POSITION: [6, 25, 0, -4, 0, 0, 0]
         },
-      	makeAssGun({ y: t - 1 }),
-      	makeAssGun({ y: -t + 1, delay: 0.5 }),
+      	makeGun({ y: t - 1 }),
+      	makeGun({ y: -t + 1, delay: 0.5 }),
       	{
       			POSITION: [10, 17, -1.4, 3, 0, 0, 0]
       	}
@@ -91,23 +96,23 @@ Class.bentSnipe = {
   	PARENT: "sniper",
   	LABEL: "Bent-Snipe",
   	GUNS: [
-      	makeSnipeGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
-      	makeSnipeGun({ x: -2, y: 2, angle: 17, delay: 0.5}),
-      	makeSnipeGun({})
+      	makeGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
+      	makeGun({ x: -2, y: 2, angle: 17, delay: 0.5}),
+      	makeGun({})
     ]
 }
 Class.canary = {
   	PARENT: "marksman",
   	LABEL: "Canary",
   	GUNS: [
-      	makeMarksGun({ y: t }),
-      	makeMarksGun({ y: -t }),
-      	makeMarksGun({ y: t, x: 5 }),
-      	makeMarksGun({ y: -t, x: 5 }),
-      	makeMarksGun({ y: t, x: 10 }),
-      	makeMarksGun({ y: -t, x: 10 }),
-      	makeMarksGun2({ y: t }),
-      	makeMarksGun2({ y: -t, delay: 0.5 })
+      	makeCos({ y: t }),
+      	makeCos({ y: -t }),
+      	makeCos({ y: t, x: 5 }),
+      	makeCos({ y: -t, x: 5 }),
+      	makeCos({ y: t, x: 10 }),
+      	makeCos({ y: -t, x: 10 }),
+      	makeGun({ y: t }),
+      	makeGun({ y: -t, delay: 0.5 })
     ]
 }
 Class.crow = makeMulti("owl", 2, "Crow")
@@ -116,43 +121,43 @@ Class.megagun = {
   	PARENT: "minigun",
   	LABEL: "Megagun",
   	GUNS: [
-      	makeMinigunGun({ y: t }),
-      	makeMinigunGun({ y: -t, delay: 1/6 }),
-      	makeMinigunGun({ length: 19, y: t, delay: 2/6 }),
-      	makeMinigunGun({ length: 19, y: -t, delay: 3/6 }),
-      	makeMinigunGun({ length: 17, y: t, delay: 4/6 }),
-      	makeMinigunGun({ length: 17, y: -t, delay: 5/6})
+      	makeGun({ y: t }),
+      	makeGun({ y: -t, delay: 1/6 }),
+      	makeGun({ length: 19, y: t, delay: 2/6 }),
+      	makeGun({ length: 19, y: -t, delay: 3/6 }),
+      	makeGun({ length: 17, y: t, delay: 4/6 }),
+      	makeGun({ length: 17, y: -t, delay: 5/6})
     ]
 }
 Class.catastrophe = {
   	PARENT: "gunner",
 		LABEL: "Catastrophe",
   	GUNS: [
-      	makeGunnerGun({ length: 10, y: -8, angle: -8 }),
-      	makeGunnerGun({ length: 10, y: 8, angle: 8 }),
-      	makeGunnerGun({ y: 7.25, delay: 1/3 }),
-      	makeGunnerGun({ y: -7.25, delay: 1/3 }),
-      	makeGunnerGun({ length: 16, y: 3.75, delay: 2/3 }),
-      	makeGunnerGun({ length: 16, y: -3.75, delay: 2/3 })
+      	makeGun({ length: 10, y: -8, angle: -8 }),
+      	makeGun({ length: 10, y: 8, angle: 8 }),
+      	makeGun({ y: 7.25, delay: 1/3 }),
+      	makeGun({ y: -7.25, delay: 1/3 }),
+      	makeGun({ length: 16, y: 3.75, delay: 2/3 }),
+      	makeGun({ length: 16, y: -3.75, delay: 2/3 })
     ]
 }
 Class.splasher = {
   	PARENT: "sprayer",
   	LABEL: "Splasher",
   	GUNS: [
-      	makeSprayGun({ y: t, angle: 8 }),
-      	makeSprayGun({ y: -t, angle: -8, delay: 0.5 }),
-      	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8}),
-      	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
+      	makeGun({ y: t, angle: 8 }),
+      	makeGun({ y: -t, angle: -8, delay: 0.5 }),
+      	makeGun({ width: 7, y: t, x: -4, angle: 8}),
+      	makeGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 })
     ]
 }
 Class.bentMach = {
   	PARENT: "machineGun",
   	LABEL: "Bent-Mach",
   	GUNS: [
-      	makeMachineGunGun({ width: 7, y: t, x: -4, angle: 8 }),
-      	makeMachineGunGun({ width: 7, y: -t, x: -4, angle: -8, delay: 0.5 }),
-      	makeMachineGunGun({ width: 10 })
+      	makeGun({ width: 7, y: t, x: 4, angle: 8 }),
+      	makeGun({ width: 7, y: -t, x: 4, angle: -8, delay: 0.5 }),
+      	makeGun({ width: 10 })
     ]
 }
 Class.dyadic = makeMulti("machinist", 2, "Dyadic")
@@ -162,10 +167,10 @@ Class.currency = {
   	LABEL: "Currency",
   	GUNS: [
       	{
-          	POSITION: [6, 28, 0, -6, 0, 0, 0]
+          	POSITION: [10, 28, 0, -10, 0, 0, 0]
         },
-      	makeDestGun({ y: 7 }),
-      	makeDestGun({ y: -7, delay: 0.5 })
+      	makeGun({ y: 7 }),
+      	makeGun({ y: -7, delay: 0.5 })
     ]
 }
 Class.catapult = {
@@ -178,19 +183,19 @@ Class.catapult = {
       	{
           	POSITION: [3, 17, 0, -4, -4.5, -7, 0]
         },
-      	makeLaunchGun({ y: 6.5, angle: 7 }),
-      	makeLaunchGun({ y: -6.5, angle: -7 }),
-      	makeLaunchGun2({ y: 6.5, angle: 7 }),
-      	makeLaunchGun2({ y: -6.5, angle: -7, delay: 0.5 })
+      	makeCos({ y: 6.5, angle: 7 }),
+      	makeCos({ y: -6.5, angle: -7 }),
+      	makeGun({ y: 6.5, angle: 7 }),
+      	makeGun({ y: -6.5, angle: -7, delay: 0.5 })
     ]
 }
 Class.bentPound = {
   	PARENT: "pounder",
   	LABEL: Math.random() < 0.001 ? "Bent-💷" : "Bent-Pound",
   	GUNS: [
-      	makePoundGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
-      	makePoundGun({ x: -2, y: 2, angle: 17, delay: 0.5 }),
-      	makePoundGun({})
+      	makeGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
+      	makeGun({ x: -2, y: 2, angle: 17, delay: 0.5 }),
+      	makeGun({})
     ]
 }
 Class.faucile = {
@@ -198,12 +203,12 @@ Class.faucile = {
   	LABEL: "Faucile",
   	GUNS: [
       	{
-          	POSITION: [6, 28.4, 0, -6, 0, 0, 0]
+          	POSITION: [10, 28.4, 0, -10, 0, 0, 0]
         },
-      	makeArtGunSide({ y: t * 2.4 }),
-      	makeArtGunSide({ y: -t * 2.4, delay: 0.5 }),
-      	makeArtGun({ y: t + 1 }),
-      	makeArtGun({ y: -t - 1, delay: 0.5 })
+      	makeGun({ y: t * 2.4 }),
+      	makeGun({ y: -t * 2.4, delay: 0.5 }),
+      	makeGun({ y: t + 1 }),
+      	makeGun({ y: -t - 1, delay: 0.5 })
     ]
 }
 Class.extinguisher = makeMulti("dollarer", 2, "Extinguisher")
@@ -212,21 +217,21 @@ Class.bentTrap = {
   	PARENT: "trapper",
   	LABEL: "Bent-Trap",
   	GUNS: [
-      	makeTrapGun2({ x: -2, y: -2, angle: -17 }),
-      	makeTrapGun2({ x: -2, y: 2, angle: 17 }),
-      	makeTrapGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
-      	makeTrapGun({ x: -2, y: 2, angle: 17, delay: 0.5 }),
-      	makeTrapGun2({}),
-      	makeTrapGun({})
+      	makeCos({ x: -2, y: -2, angle: -17 }),
+      	makeCos({ x: -2, y: 2, angle: 17 }),
+      	makeGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
+      	makeGun({ x: -2, y: 2, angle: 17, delay: 0.5 }),
+      	makeCos({}),
+      	makeGun({})
     ]
 }
 Class.creator = {
   	PARENT: "builder",
   	LABEL: "Creator",
   	GUNS: [
-      	makeBuildGun({ angle: 0 }),
-      	makeBuildGun2({ angle: 22.5 }),
-      	makeBuildGun2({ angle: -22.5, delay: 0.5 })
+      	makeCos({ angle: 0 }),
+      	makeGun({ angle: 22.5 }),
+      	makeGun({ angle: -22.5, delay: 0.5 })
     ]
 }
 Class.artist = makeMulti("caltropper", 2, "artist")
