@@ -2,7 +2,8 @@ const { combineStats, makeAuto, makeTurret, makeOver, makeDeco, makeGuard, makeB
 const { base, statnames, gunCalcNames, dfltskl, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 // references
-const makeGun = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.basic, bulletType = "bullet", statCalc = "" }) => {
+const makeGun = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats, bulletType = "bullet", statCalc = "" }) => {
+  	stats ?? g.basic
     return {
         POSITION: [length, width, aspect, x, y, angle, delay],
         PROPERTIES: {
