@@ -77,10 +77,10 @@ Class.caltropper = { // i will not call it wark, cry about it
 		PARENT: "trapper",
   	LABEL: "Caltropper",
   	GUNS: [
-      	makeCos({ length: 12, wy: t, angle: 8 }),
-      	makeCos({ y: -t, angle: -8 }),
-      	makeGun({ y: t, angle: 8 }),
-      	makeGun({ y: -t, angle: -8, delay: 0.5 })
+      	makeCos({ length: 12, width: 7, y: t, angle: 8 }),
+      	makeCos({ length: 12, width: 7, y: -t, angle: -8 }),
+      	makeGun({ length: 3, width: 7, aspect: 1.7, x: 15, y: t, angle: 8, stats: [g.trap], statCalc: "trap", bulletType: "trap" }),
+      	makeGun({ length: 3, width: 7, aspect: 1.7, x: 15, y: -t, angle: -8, delay: 0.5, stats: [g.trap], statCalc: "trap", bulletType: "trap" })
     ]
 }
 // owl upgrades
