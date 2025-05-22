@@ -18,6 +18,10 @@ const makeCos = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0 }
     }
 }
 // flanks
+const upgrades = Class.doubleTwin.UPGRADES_TIER_3
+Class.doubleTwin = makeMulti("twin", 3, "Triple Twin")
+Class.tripleTwin = makeMulti("twin", 6, "Hexa Twin")
+Class.doubleTwin.UPGRADES_TIER_3 = upgrades
 // snipers
 Class.degrader = makeMulti("sniper", 3, "Degrader")
 Class.rustage = makeMulti("assassin", 3, "Rustage")
@@ -115,7 +119,7 @@ Class.canary = {
       	makeGun({ y: -t, delay: 0.5 })
     ]
 }
-Class.crow = makeMulti("owl", 2, "Crow")
+Class.crow = makeMulti("owl", 3, "Crow")
 // machinist upgrades
 Class.megagun = {
   	PARENT: "minigun",
@@ -160,7 +164,7 @@ Class.bentMach = {
       	makeGun({ width: 10 })
     ]
 }
-Class.dyadic = makeMulti("machinist", 2, "Dyadic")
+Class.dyadic = makeMulti("machinist", 3, "Triadic")
 // dollarer upgrades
 Class.currency = {
   	PARENT: "destroyer",
@@ -211,7 +215,7 @@ Class.faucile = {
       	makeGun({ y: -t - 1, delay: 0.5 })
     ]
 }
-Class.extinguisher = makeMulti("dollarer", 2, "Extinguisher")
+Class.extinguisher = makeMulti("dollarer", 3, "Extinguisher")
 // caltropper upgrades
 Class.bentTrap = {
   	PARENT: "trapper",
@@ -234,7 +238,7 @@ Class.creator = {
       	makeGun({ angle: -22.5, delay: 0.5 })
     ]
 }
-Class.artist = makeMulti("caltropper", 2, "artist")
+Class.artist = makeMulti("caltropper", 3, "artist")
 // remove turret from hexa trapper and remove septa trapper because I said so
 Class.hexaTrapper.TURRETS = []
 Class.triTrapper.UPGRADES_TIER_3 = ["fortress", "hexaTrapper", "architect"]
