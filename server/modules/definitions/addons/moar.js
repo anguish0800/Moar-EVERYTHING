@@ -103,7 +103,7 @@ Class.bentSnipe = {
   	LABEL: "Bent-Snipe",
   	GUNS: [
       	makeGun({ x: -2, y: -2, angle: -17, delay: 0.5 }),
-      	makeGun({ x: -2, y: 2, angle: 17, delay: 0.5}),
+      	makeGun({ x: -2, y: 2, angle: 17, delay: 0.5 }),
       	makeGun({})
     ]
 }
