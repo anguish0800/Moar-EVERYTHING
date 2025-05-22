@@ -2,7 +2,7 @@ const { combineStats, makeAuto, makeTurret, makeOver, makeDeco, makeGuard, makeB
 const { base, statnames, gunCalcNames, dfltskl, smshskl } = require('../constants.js');
 const g = require('../gunvals.js');
 // references
-const makeGun = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = g.basic, bulletType = "bullet", statCalc = "" }) => {
+const makeGun = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0, delay = 0, stats = [g.basic], bulletType = "bullet", statCalc = "" }) => {
     return {
         POSITION: [length, width, aspect, x, y, angle, delay],
         PROPERTIES: {
@@ -20,6 +20,8 @@ const makeCos = ({ length = 18, width = 8, aspect = 1, x = 0, y = 0, angle = 0 }
 // flanks
 const upgrades = Class.doubleTwin.UPGRADES_TIER_3
 Class.doubleTwin = makeMulti("twin", 3, "Triple Twin")
+Class.autoDouble = makeAuto("doubleTwin")
+Class.bentDouble = makeMulti("tripleShot", 3, "Bent Triple")
 Class.tripleTwin = makeMulti("twin", 6, "Hexa Twin")
 Class.doubleTwin.UPGRADES_TIER_3 = upgrades
 // snipers
@@ -67,8 +69,8 @@ Class.dollarer = {
       	{
       			POSITION: [10, 25, 0, -10, 0, 0, 0]
       	},
-      	makeGun({ y: t + 1 }),
-      	makeGun({ y: -t - 1, delay: 0.5})
+      	makeGun({ length: 20.5, width: 12, y: t + 1, stats: [g.basic, g.pounder] }),
+      	makeGun({ length: 20.5, width: 12, y: -t - 1, delay: 0.5, stats: [g.basic, g.pounder] })
     ]
 }
 Class.caltropper = { // i will not call it wark, cry about it
