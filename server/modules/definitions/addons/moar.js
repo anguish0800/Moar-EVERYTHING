@@ -77,7 +77,7 @@ Class.caltropper = { // i will not call it wark, cry about it
 		PARENT: "trapper",
   	LABEL: "Caltropper",
   	GUNS: [
-      	makeCos({ y: t, angle: 8 }),
+      	makeCos({ length: 12, wy: t, angle: 8 }),
       	makeCos({ y: -t, angle: -8 }),
       	makeGun({ y: t, angle: 8 }),
       	makeGun({ y: -t, angle: -8, delay: 0.5 })
