@@ -5,7 +5,7 @@
   "scripts": {
     "startOptimized": "node --optimize-for-size --no-lazy --gc_interval=120 server/index",
     "restartOnSaveOptimized": "node --optimize-for-size --no-lazy --gc_interval=120 --watch server/index",
-    "start": "node server/index",
+    "start": "node server/index.js",
     "restartOnSave": "node --watch server/index.js"
     "build": "echo 'hi'"
   },
