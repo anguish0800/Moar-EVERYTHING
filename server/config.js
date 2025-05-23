@@ -3,7 +3,7 @@ module.exports = {
 
     // Game server domain.
     // If the host is 'localhost:NUMBER', the NUMBER must be the port setting.
-    host: "moar-everything.glitch.me",
+    host: "moar-everything.railway.app",
 
     // Which port to run the web server on.
     port: 5000,
