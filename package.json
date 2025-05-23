@@ -6,9 +6,8 @@
     "startOptimized": "node --optimize-for-size --no-lazy --gc_interval=120 server/index",
     "restartOnSaveOptimized": "node --optimize-for-size --no-lazy --gc_interval=120 --watch server/index",
     "start": "node server/index",
-    "restartOnSave": "node --watch server/index",
-    "host": "node standaloneClient/index",
-    "build": "node standaloneClient/build minify"
+    "restartOnSave": "node --watch server/index.js"
+    "build": "echo 'hi'"
   },
   "dependencies": {
     "ws": "^8.13.0"
